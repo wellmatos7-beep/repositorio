@@ -7,22 +7,159 @@
   <meta name="theme-color" content="#17251f">
   <title>Artigos | Wellington Matos</title>
   <style>
-    :root{--green:#243b32;--deep:#17251f;--gold:#c49a5a;--paper:#f3f0e8;--ink:#202720;--muted:#667067;--line:#d8d3c7;--white:#fffdf8;--serif:Georgia,"Times New Roman",serif;--sans:Arial,Helvetica,sans-serif}
-    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65}a{color:inherit}.topline{height:5px;background:linear-gradient(90deg,var(--gold),#e0c28f,var(--green))}header{background:var(--deep);color:var(--white)}.wrap{width:min(980px,calc(100% - 40px));margin:auto}.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-family:var(--serif);font-size:20px;text-decoration:none}.nav a:last-child{color:#f0d7a8;font-size:14px}main{padding:64px 0 90px}.eyebrow{color:#8a6737;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:bold}h1,h2{font-family:var(--serif);font-weight:400}h1{font-size:clamp(42px,7vw,68px);line-height:1.05;margin:12px 0}main>div>p{color:var(--muted);max-width:620px;margin:0 0 32px}.article-card{display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px;padding:28px;background:var(--white);border:1px solid var(--line);box-shadow:0 10px 30px #1217140f}.article-card h2{font-size:30px;margin:0 0 8px}.article-card p{color:var(--muted);margin:0}.article-card a{display:inline-block;background:var(--green);color:white;text-decoration:none;padding:12px 18px;font-size:14px}.article-card a:hover{background:#345448}footer{background:#111b15;color:#9eafa2;padding:22px 0;font-size:13px}@media(max-width:620px){.wrap{width:calc(100% - 32px)}main{padding:48px 0 64px}.article-card{grid-template-columns:1fr}.article-card a{justify-self:start}}
+    :root{
+      --green:#243b32;
+      --deep:#17251f;
+      --gold:#c49a5a;
+      --paper:#f3f0e8;
+      --ink:#202720;
+      --muted:#667067;
+      --line:#d8d3c7;
+      --white:#fffdf8;
+      --serif:Georgia,"Times New Roman",serif;
+      --sans:Arial,Helvetica,sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:var(--sans);
+      line-height:1.65;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{
+      width:min(1100px, calc(100% - 2rem));
+      margin:0 auto;
+    }
+    header{
+      background:#fff;
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:1rem 0;
+      font-size:.95rem;
+    }
+    .brand{
+      font-weight:700;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+    .topline{
+      height:5px;
+      background:linear-gradient(90deg,var(--green),var(--gold));
+    }
+    main{
+      padding:3rem 0 4rem;
+    }
+    .eyebrow{
+      font-size:.8rem;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:.75rem;
+    }
+    h1{
+      font-family:var(--serif);
+      font-size:clamp(2.2rem,4vw,3.5rem);
+      margin:0 0 .75rem;
+      color:var(--deep);
+    }
+    p{
+      margin:0 0 1.5rem;
+    }
+    .article-card{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      background:#fffdfb;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:1.25rem 1.5rem;
+      margin-top:1.25rem;
+      box-shadow:0 8px 26px rgba(23,37,31,.03);
+    }
+    .article-card h2{
+      margin:0 0 .3rem;
+      font-family:var(--serif);
+      font-size:1.6rem;
+      color:var(--deep);
+    }
+    .article-card p{
+      margin:0;
+      color:var(--muted);
+    }
+    .article-card a{
+      white-space:nowrap;
+      display:inline-block;
+      padding:.8rem 1rem;
+      border:1px solid var(--green);
+      background:var(--green);
+      color:#fff;
+      border-radius:999px;
+      font-weight:600;
+    }
+    footer{
+      border-top:1px solid var(--line);
+      background:#fff;
+      padding:1.25rem 0;
+      text-align:center;
+      color:var(--muted);
+    }
+
+    @media (max-width: 640px){
+      .article-card{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .article-card a{
+        width:100%;
+        text-align:center;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="topline"></div>
-  <header><div class="wrap nav"><a class="brand" href="index.html">Wellington Matos</a><a href="index.html">Voltar ao início</a></div></header>
-  <main><div class="wrap">
-    <div class="eyebrow">Pesquisa · História · Memória</div>
-    <h1>Artigos</h1>
-    <p>Textos sobre história, patrimônio e memória brasileira.</p>
-    <article class="article-card">
-      <div><h2>Caminhões de Hitler no Brasil</h2><p>Por Wellington Matos · O “Mondrongo dos Padres” e a história dos caminhões Opel Blitz do Projeto AMA em São Bento, Maranhão.</p></div>
-      <a href="Caminh%C3%B5es-de-Hitler-em-no-Brasil.html">Ler artigo&nbsp; ↗</a>
-    </article>
-  </div></main>
-  <footer><div class="wrap">© 2026 · Wellington Matos</div></footer>
+
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">Wellington Matos</a>
+      <a href="index.html">Voltar ao início</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="eyebrow">Pesquisa · História · Memória</div>
+      <h1>Artigos</h1>
+      <p>Textos sobre história, patrimônio e memória brasileira.</p>
+
+      <article class="article-card">
+        <div>
+          <h2>Caminhões de Hitler no Brasil</h2>
+          <p>Por Wellington Matos · O “Mondrongo dos Padres” e a história dos caminhões Opel Blitz do Projeto AMA em São Bento, Maranhão.</p>
+        </div>
+        <a href="artigos/caminhoes-de-hitler-no-brasil.html">Ler artigo ↗</a>
+      </article>
+
+      <article class="article-card">
+        <div>
+          <h2>Memória e patrimônio no Brasil</h2>
+          <p>Por Wellington Matos · Reflexões sobre a forma como a memória coletiva preserva ou silencia vestígios do passado.</p>
+        </div>
+        <a href="artigos/memoria-e-patrimonio-no-brasil.html">Ler artigo ↗</a>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 · Wellington Matos</div>
+  </footer>
 </body>
 </html>
