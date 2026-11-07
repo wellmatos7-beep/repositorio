@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portal oficial de Wellington Matos: escritor, pesquisador, geógrafo e compositor. Pesquisas sobre a Segunda Guerra Mundial no Brasil, o B-25D Mitchell no Maranhão e patrimônio histórico-material.">
+<meta name="theme-color" content="#17251f">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wellingtonmatos.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Wellington Matos">
+<meta property="og:title" content="Wellington Matos | Pesquisa, História e Literatura">
+<meta property="og:description" content="Portal de pesquisa histórica, literatura, geografia e memória da Segunda Guerra Mundial no Brasil.">
+<meta property="og:url" content="https://wellingtonmatos.com.br/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Wellington Matos",
+  "alternateName": ["Well Matos", "Nelito"],
+  "url": "https://wellingtonmatos.com.br/",
+  "jobTitle": ["Escritor", "Pesquisador", "Geógrafo", "Compositor"],
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "ISNI",
+    "value": "0000 0005 3060 6430"
+  },
+  "knowsAbout": ["História da Segunda Guerra Mundial no Brasil", "Geografia", "Geoprocessamento", "Patrimônio histórico", "Literatura"]
+}
+</script>
+<title>Wellington Matos | Pesquisa, História e Literatura</title>
+<style>
+:root {
+  --site-primary: #243b32;
+  --site-on-primary: #ffffff;
+  --site-secondary: #c49a5a;
+  --site-on-secondary: #1d211d;
+  --site-background: #f3f0e8;
+  --site-on-background: #202720;
+  --site-font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-font-heading: Georgia, "Times New Roman", serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+  --surface: #fffdf8;
+  --surface-soft: #e9e5da;
+  --muted: #667067;
+  --line: #d8d3c7;
+  --accent-dark: #8a6737;
+  --shadow: 0 18px 50px rgba(24, 34, 27, .10);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: light-dark(var(--site-background), #141a16); color: light-dark(var(--site-on-background), #e8ece6); font-family: var(--site-font-body); }
+#app { min-height: 100vh; width: 100%; background-color: light-dark(var(--site-background), #141a16); color: light-dark(var(--site-on-background), #e8ece6); border-radius: 0; overflow: hidden; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+.wrap { width: min(1160px, calc(100% - 44px)); margin: 0 auto; }
+.topline { height: 5px; background: linear-gradient(90deg, var(--site-secondary), #e0c28f, var(--site-primary)); }
+header { position: sticky; top: 0; z-index: 20; background: light-dark(rgba(243,240,232,.94), rgba(20,26,22,.94)); backdrop-filter: blur(14px); border-bottom: 1px solid light-dark(var(--line), #303a33); }
+.nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 12px; min-width: 210px; }
+.brand-mark { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid var(--site-secondary); color: var(--site-secondary); font-family: var(--site-font-heading); font-size: 22px; border-radius: 50%; }
+.brand strong { display: block; font-family: var(--site-font-heading); font-size: 17px; letter-spacing: .02em; }
+.brand small { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; }
+.navlinks { display: flex; align-items: center; gap: 25px; color: light-dark(#465248, #c3ccc4); font-size: 12px; font-weight: 650; letter-spacing: .04em; }
+.navlinks a:hover { color: var(--site-secondary); }
+.nav-cta, .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 13px 18px; border-radius: calc(4px * var(--site-radius-scale)); background: var(--site-primary); color: var(--site-on-primary); font-size: 12px; font-weight: 700; letter-spacing: .04em; border: 1px solid var(--site-primary); transition: transform .2s, background .2s; cursor: pointer; }
+.nav-cta:hover, .button:hover { transform: translateY(-2px); background: #345144; }
+.menu-toggle { display: none; border: 1px solid var(--line); color: inherit; background: transparent; border-radius: 4px; padding: 9px 12px; }
+.hero { position: relative; background: var(--site-primary); color: #f8f5ec; overflow: hidden; }
+.hero::before { content: ""; position: absolute; width: 620px; height: 620px; border: 1px solid rgba(196,154,90,.23); border-radius: 50%; right: -120px; top: -270px; box-shadow: 0 0 0 55px rgba(196,154,90,.035), 0 0 0 110px rgba(196,154,90,.025); opacity: var(--site-decoration-opacity); }
+.hero::after { content: ""; position: absolute; inset: auto 0 0; height: 5px; background: linear-gradient(90deg, transparent, var(--site-secondary), transparent); opacity: var(--site-decoration-opacity); }
+.hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.12fr .88fr; gap: 60px; align-items: center; padding: calc(90px * var(--site-spacing-scale)) 0 calc(100px * var(--site-spacing-scale)); }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; color: #d9b77e; text-transform: uppercase; font-size: 10px; letter-spacing: .22em; font-weight: 750; }
+.eyebrow::before { content: ""; width: 30px; height: 1px; background: var(--site-secondary); }
+h1, h2, h3 { font-family: var(--site-font-heading); font-weight: 400; }
+h1 { max-width: 690px; margin: 23px 0 22px; font-size: calc(clamp(44px, 6vw, 76px) * var(--site-heading-scale)); line-height: .99; letter-spacing: -.035em; }
+h1 em { color: #d7b77f; font-style: italic; }
+.hero-copy { max-width: 580px; color: #d4ddd5; font-size: 15px; line-height: 1.85; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.button.gold { background: var(--site-secondary); border-color: var(--site-secondary); color: #1f281f; }
+.button.ghost { background: transparent; border-color: rgba(255,255,255,.35); color: #fff; }
+.hero-note { margin-top: 32px; color: #b8c4ba; font-size: 11px; letter-spacing: .05em; }
+.hero-art { min-height: 410px; position: relative; display: grid; place-items: center; }
+.art-frame { width: min(100%, 410px); aspect-ratio: 4/5; border: 1px solid rgba(215,183,127,.55); padding: 13px; position: relative; transform: rotate(2deg); }
+.art-inner { height: 100%; background: linear-gradient(150deg, rgba(9,22,16,.15), rgba(9,22,16,.8)), radial-gradient(ellipse at 70% 25%, #718174 0, #344d40 36%, #1a2a22 75%); display: flex; flex-direction: column; justify-content: space-between; padding: 28px; position: relative; overflow: hidden; }
+.art-inner::before { content: ""; position: absolute; width: 280px; height: 280px; border: 1px solid rgba(215,183,127,.45); border-radius: 50%; right: -70px; top: 60px; box-shadow: 0 0 0 30px rgba(215,183,127,.05), 0 0 0 60px rgba(215,183,127,.04); }
+.art-top, .art-bottom { position: relative; z-index: 1; }
+.art-top { color: #e5c995; font-size: 9px; letter-spacing: .22em; text-transform: uppercase; }
+.art-quote { position: relative; z-index: 1; font-family: var(--site-font-heading); font-size: clamp(25px, 3vw, 38px); line-height: 1.1; max-width: 280px; }
+.art-bottom { color: #d7b77f; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
+.art-caption { position: absolute; right: -22px; bottom: 38px; background: var(--site-secondary); color: #1d261f; padding: 15px 19px; font-family: var(--site-font-heading); font-size: 17px; transform: rotate(-3deg); box-shadow: var(--shadow); }
+.stats { background: var(--surface); color: #27332b; border-bottom: 1px solid var(--line); }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat { padding: 25px 22px; border-right: 1px solid var(--line); }
+.stat:first-child { border-left: 1px solid var(--line); }
+.stat strong { display: block; color: var(--accent-dark); font-family: var(--site-font-heading); font-size: 27px; font-weight: 400; }
+.stat span { display: block; margin-top: 5px; color: #68736a; font-size: 10px; text-transform: uppercase; letter-spacing: .12em; }
+section { padding: calc(88px * var(--site-spacing-scale)) 0; }
+.section-head { display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-bottom: 38px; }
+.kicker { color: var(--accent-dark); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 800; }
+h2 { margin: 12px 0 0; font-size: calc(clamp(34px, 4vw, 49px) * var(--site-heading-scale)); line-height: 1.05; letter-spacing: -.025em; }
+.section-intro { max-width: 490px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.about-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 70px; align-items: center; }
+.about-monogram { min-height: 390px; background: #e3ded1; position: relative; display: grid; place-items: center; overflow: hidden; }
+.about-monogram::before, .about-monogram::after { content: ""; position: absolute; border: 1px solid rgba(138,103,55,.35); border-radius: 50%; width: 300px; height: 300px; }
+.about-monogram::after { width: 390px; height: 390px; }
+.monogram { position: relative; z-index: 1; font-family: var(--site-font-heading); font-size: 105px; color: #31493b; letter-spacing: -.1em; }
+.monogram-caption { position: absolute; z-index: 2; bottom: 22px; left: 24px; color: #59675b; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; }
+.about-copy p { color: var(--muted); font-size: 14px; line-height: 1.9; }
+.credentials { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 28px; }
+.credential { border: 1px solid var(--line); padding: 9px 12px; color: #59665b; font-size: 10px; letter-spacing: .04em; }
+.research { background: #e9e5da; color: #202720; }
+.research .section-intro { color: #626c63; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.card { background: #f8f6ef; border: 1px solid #d8d3c7; padding: 27px; min-height: 275px; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.card-number { color: #9a7848; font-family: var(--site-font-heading); font-size: 14px; }
+.card h3 { margin: 27px 0 12px; font-size: 25px; line-height: 1.1; }
+.card p { margin: 0 0 22px; color: #667067; font-size: 12px; line-height: 1.8; }
+.card a { margin-top: auto; color: #72552e; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
+.b25 { background: #1b2c23; color: #f5f1e7; }
+.b25-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 70px; align-items: center; }
+.b25-visual { min-height: 400px; position: relative; overflow: hidden; border: 1px solid rgba(215,183,127,.45); background: radial-gradient(ellipse at 48% 55%, #52675a, #293d31 54%, #17241d 100%); display: grid; place-items: center; }
+.b25-visual::before { content: ""; position: absolute; width: 340px; height: 340px; border: 1px solid rgba(215,183,127,.4); border-radius: 50%; box-shadow: 0 0 0 38px rgba(215,183,127,.04), 0 0 0 76px rgba(215,183,127,.03); }
+.plane-symbol { position: relative; z-index: 1; color: #d8c49b; font-family: var(--site-font-heading); font-size: 85px; transform: rotate(-12deg); opacity: .9; }
+.visual-label { position: absolute; bottom: 22px; left: 24px; color: #d7b77f; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; }
+.b25 h2 { color: #f5f1e7; }
+.b25 .kicker { color: #d7b77f; }
+.b25 p { color: #c2cec4; font-size: 13px; line-height: 1.9; }
+.fact-list { margin: 24px 0 28px; border-top: 1px solid rgba(255,255,255,.16); }
+.fact { display: flex; justify-content: space-between; gap: 15px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.16); font-size: 11px; }
+.fact span:first-child { color: #9eafa2; }
+.fact strong { color: #f0dfbd; text-align: right; font-weight: 600; }
+.timeline { background: var(--surface); }
+.timeline-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--line); }
+.time-item { padding: 25px 22px 10px 0; position: relative; }
+.time-item::before { content: ""; position: absolute; top: -5px; left: 0; width: 9px; height: 9px; border-radius: 50%; background: var(--site-secondary); box-shadow: 0 0 0 5px var(--surface); }
+.time-item strong { color: var(--accent-dark); font-family: var(--site-font-heading); font-size: 23px; font-weight: 400; }
+.time-item p { color: var(--muted); font-size: 11px; line-height: 1.7; }
+.books { background: #e9e5da; color: #202720; }
+.book-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.book { background: #f8f6ef; border: 1px solid #d8d3c7; padding: 22px; display: flex; gap: 18px; align-items: center; min-height: 170px; }
+.book-cover { width: 82px; min-width: 82px; height: 118px; display: flex; flex-direction: column; justify-content: space-between; padding: 10px 8px; color: #f6f0df; background: linear-gradient(145deg, #344b3d, #17251d); box-shadow: 5px 6px 12px rgba(0,0,0,.16); border-left: 4px solid #b28a4f; }
+.book-cover.sand { background: linear-gradient(145deg, #b18d5d, #54432f); }
+.book-cover.blue { background: linear-gradient(145deg, #415e69, #1c343b); }
+.book-cover small { font-size: 6px; letter-spacing: .12em; text-transform: uppercase; }
+.book-cover b { font-family: var(--site-font-heading); font-size: 12px; line-height: 1.1; font-weight: 400; }
+.book-info h3 { margin: 0 0 7px; font-family: var(--site-font-heading); font-size: 19px; font-weight: 400; }
+.book-info p { margin: 0; color: #697269; font-size: 10px; line-height: 1.6; }
+.institute { background: var(--surface); }
+.institute-panel { background: #243b32; color: #f5f1e7; padding: 42px; display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: center; }
+.institute-panel .kicker { color: #d7b77f; }
+.institute-panel h2 { font-size: calc(38px * var(--site-heading-scale)); }
+.institute-panel p { max-width: 690px; color: #c7d0c8; font-size: 13px; line-height: 1.8; }
+.seal { width: 105px; height: 105px; border: 1px solid rgba(215,183,127,.65); border-radius: 50%; display: grid; place-items: center; color: #d7b77f; font-family: var(--site-font-heading); font-size: 32px; }
+.disclaimer { margin-top: 14px; color: var(--muted); font-size: 10px; line-height: 1.6; }
+.library-tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 20px; }
+.searchbox { flex: 1; min-width: 220px; border: 1px solid var(--line); background: var(--surface); color: inherit; padding: 13px 15px; outline: none; }
+.searchbox:focus { border-color: var(--site-secondary); }
+.filter { border: 1px solid var(--line); background: transparent; color: inherit; padding: 12px 14px; cursor: pointer; font-size: 11px; }
+.filter.active { background: var(--site-primary); color: white; border-color: var(--site-primary); }
+.resource-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.resource { border: 1px solid var(--line); background: var(--surface); padding: 20px; }
+.resource small { color: var(--accent-dark); font-size: 9px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+.resource h3 { margin: 9px 0; font-size: 20px; }
+.resource p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.empty { display: none; color: var(--muted); font-size: 13px; padding: 22px; border: 1px dashed var(--line); }
+.contact { background: #1b2c23; color: #f5f1e7; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; }
+.contact h2 { color: #f5f1e7; }
+.contact p { color: #c2cec4; font-size: 13px; line-height: 1.8; }
+.contact-form { display: grid; gap: 12px; }
+.contact-form input { width: 100%; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.06); color: white; padding: 14px; outline: none; }
+.contact-form input::placeholder { color: #aab8ad; }
+.form-note { color: #aab8ad; font-size: 10px; line-height: 1.6; }
+footer { background: #111b15; color: #9eafa2; padding: 27px 0; font-size: 10px; }
+.footer-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.footer-name { color: #e5d7ba; font-family: var(--site-font-heading); font-size: 17px; }
+@media (max-width: 850px) {
+  .navlinks { display: none; position: absolute; top: 76px; left: 0; right: 0; padding: 20px 24px; background: light-dark(#f3f0e8,#141a16); border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; }
+  .navlinks.open { display: flex; }
+  .nav-cta { display: none; }
+  .menu-toggle { display: block; }
+  .hero-grid, .about-grid, .b25-grid, .contact-grid { grid-template-columns: 1fr; gap: 38px; }
+  .hero-grid { padding: 65px 0 75px; }
+  .hero-art { min-height: 330px; }
+  .art-frame { width: min(78%, 340px); }
+  .section-head { display: block; }
+  .section-intro { margin-top: 16px; }
+  .cards, .book-grid { grid-template-columns: repeat(2, 1fr); }
+  .timeline-list { grid-template-columns: repeat(2, 1fr); row-gap: 20px; }
+  .institute-panel { grid-template-columns: 1fr; }
+  .seal { display: none; }
+}
+@media (max-width: 560px) {
+  .wrap { width: min(100% - 32px, 1160px); }
+  .brand { min-width: 0; }
+  .brand small { font-size: 8px; }
+  h1 { font-size: 48px; }
+  section { padding: 65px 0; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat:nth-child(3) { border-left: 1px solid var(--line); }
+  .stat:nth-child(3), .stat:nth-child(4) { border-top: 1px solid var(--line); }
+  .cards, .book-grid, .resource-list { grid-template-columns: 1fr; }
+  .timeline-list { grid-template-columns: 1fr 1fr; }
+  .about-monogram { min-height: 300px; }
+  .institute-panel { padding: 28px; }
+  .footer-row { align-items: flex-start; flex-direction: column; }
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="topline"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="Wellington Matos - início">
+        <span class="brand-mark">WM</span>
+        <span><strong>Wellington Matos</strong><small>História · Pesquisa · Literatura</small></span>
+      </a>
+      <nav class="navlinks" id="navlinks" aria-label="Navegação principal">
+        <a href="#sobre">O pesquisador</a><a href="#pesquisas">Pesquisas</a><a href="#aeronaves">Aeronaves</a><a href="#b25d">B-25D</a><a href="#inventario">Inventário</a><a href="#livros">Livros</a>
+      </nav>
+      <a class="nav-cta" href="#contato">Contato profissional ↗</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">Menu ☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Pesquisa histórica e memória brasileira</div>
+          <h1>História que<br><em>resiste ao tempo.</em></h1>
+          <p class="hero-copy">Wellington Matos é escritor, pesquisador, geógrafo e compositor. Dedica-se à investigação histórica, à memória da Segunda Guerra Mundial no Brasil e à valorização do patrimônio material e documental.</p>
+          <div class="hero-actions"><a class="button gold" href="#pesquisas">Conheça as pesquisas ↗</a><a class="button ghost" href="#livros">Obras publicadas</a></div>
+          <div class="hero-note">MARANHÃO · BRASIL · MEMÓRIA · PATRIMÔNIO</div>
+        </div>
+        <div class="hero-art" aria-label="Composição gráfica editorial sobre história e memória">
+          <div class="art-frame"><div class="art-inner"><div class="art-top">Caderno de pesquisa · Acervo e memória</div><div class="art-quote">“Preservar vestígios é ampliar a compreensão da história.”</div><div class="art-bottom">Wellington Matos · Pesquisador</div></div></div>
+          <div class="art-caption">História & território</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats"><div class="wrap stats-grid">
+      <div class="stat"><strong>2021</strong><span>Investigação do B-25D</span></div>
+      <div class="stat"><strong>1943</strong><span>Contexto do acidente</span></div>
+      <div class="stat"><strong>IHGM</strong><span>Membro do Instituto</span></div>
+      <div class="stat"><strong>Brasil</strong><span>História e patrimônio</span></div>
+    </div></div>
+
+    <section id="sobre"><div class="wrap about-grid">
+      <div class="about-monogram"><div class="monogram">WM</div><div class="monogram-caption">Escritor · Pesquisador · Geógrafo</div></div>
+      <div class="about-copy"><div class="kicker">Trajetória e atuação</div><h2>Pesquisa, território e memória.</h2>
+        <p>Wellington Matos é escritor, pesquisador e compositor, com atuação em temas de história regional, geografia, patrimônio e memória. Sua pesquisa sobre a Segunda Guerra Mundial no Maranhão investiga ocorrências aeronáuticas, presença militar norte-americana e vestígios materiais relacionados ao conflito.</p>
+        <p>É autor de livros que aproximam investigação histórica, documentação e divulgação cultural. Sua atuação combina pesquisa de campo, consulta a acervos, georreferenciamento e produção editorial. Em novembro de 2026, informou sua nomeação como membro do Instituto Histórico e Geográfico do Maranhão (IHGM); a documentação comprobatória poderá ser incorporada ao portal após seu envio e conferência.</p>
+        <div class="credentials"><span class="credential">Geógrafo</span><span class="credential">Bacharel em Agronegócios · UFLA</span><span class="credential">Geoprocessamento</span><span class="credential">Escritor e compositor</span><span class="credential">ISNI 0000 0005 3060 6430</span></div>
+        <a class="button" href="#contato">Fale com o pesquisador ↗</a>
+      </div>
+    </div></section>
+
+    <section class="research" id="pesquisas"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">Linhas de investigação</div><h2>Pesquisa com fontes,<br>território e contexto.</h2></div><p class="section-intro">Um espaço para reunir estudos, documentos, registros de campo e referências sobre episódios ainda pouco conhecidos da história brasileira. Entre os temas abordados no livro estão quedas de aeronaves, prisões de nazistas, traições e espionagem, resgates de náufragos, bases secretas, contrabando e pirataria e campos de concentração. Cada episódio será apresentado com contextualização e fontes próprias, sem presumir que todos tenham ocorrido no Maranhão.</p></div>
+      <div class="cards">
+        <article class="card"><span class="card-number">01 / HISTÓRIA MILITAR</span><h3>Segunda Guerra Mundial no Brasil</h3><p>Presença militar estrangeira, rotas aéreas e marítimas, acidentes, naufrágios e acontecimentos relacionados ao Atlântico Sul.</p><a href="#b25d">Explorar pesquisa ↗</a></article>
+        <article class="card"><span class="card-number">02 / AVIAÇÃO</span><h3>B-25D Mitchell no Maranhão</h3><p>Investigação dos destroços da aeronave acidentada no litoral maranhense em 1943 e documentação da descoberta de 2021.</p><a href="#b25d">Conhecer o dossiê ↗</a></article>
+        <article class="card"><span class="card-number">03 / PATRIMÔNIO</span><h3>Acervos e vestígios materiais</h3><p>Identificação, documentação, preservação e salvaguarda de objetos, documentos, estruturas e testemunhos históricos.</p><a href="#inventario">Ver proposta de inventário ↗</a></article>
+      </div>
+    </div></section>
+
+    <section class="b25" id="b25d"><div class="wrap b25-grid">
+      <div class="b25-visual"><div class="plane-symbol">✈</div><div class="visual-label">North American B-25D Mitchell · 1943</div></div>
+      <div><div class="kicker">Dossiê de pesquisa em destaque</div><h2>O B-25D Mitchell e a memória da guerra no Maranhão.</h2>
+        <p>A investigação dos destroços do bombardeiro norte-americano North American B-25D Mitchell, acidentado no litoral de Humberto de Campos (MA), em maio de 1943, constitui um eixo central da pesquisa de Wellington Matos sobre a Segunda Guerra Mundial no Brasil.</p>
+        <p>Em 2021, Wellington Matos esteve associado à identificação e à investigação do local dos destroços, em trabalho que também envolveu moradores e outros participantes. O dossiê reunirá cronologia, fontes jornalísticas, documentos, imagens e informações técnicas, distinguindo fatos comprovados de questões ainda em apuração.</p>
+        <div class="fact-list"><div class="fact"><span>Aeronave</span><strong>North American B-25D Mitchell</strong></div><div class="fact"><span>Ocorrência</span><strong>13 de maio de 1943</strong></div><div class="fact"><span>Localidade</span><strong>Humberto de Campos · Maranhão</strong></div><div class="fact"><span>Investigação e identificação</span><strong>2021</strong></div></div>
+        <a class="button gold" href="#biblioteca">Consultar referências e publicações ↗</a>
+      </div>
+    </div></section>
+
+    <section id="aeronaves"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">Inventário de ocorrências aeronáuticas</div><h2>Três aeronaves no território maranhense.</h2></div><p class="section-intro">Registro inicial das aeronaves indicadas por Wellington Matos em sua pesquisa. A ficha técnica de cada ocorrência será ampliada com datas, números de série, tripulações, coordenadas, fotografias e fontes documentais verificadas.</p></div>
+      <div class="cards">
+        <article class="card"><span class="card-number">01 / FORÇAS AÉREAS DOS EUA</span><h3>North American B-25D Mitchell</h3><p><strong>Local:</strong> Baía do Tubarão, município de Humberto de Campos (MA). Ocorrência de 1943; investigação e identificação dos destroços associadas à pesquisa de Wellington Matos em 2021.</p><a href="#b25d">Abrir dossiê B-25D ↗</a></article>
+        <article class="card"><span class="card-number">02 / AERONAVE B-17F</span><h3>Boeing B-17F Flying Fortress</h3><p><strong>Local indicado na pesquisa:</strong> região de América / São Francisco, município de Santo Amaro do Maranhão (MA). A cronologia, a unidade, a matrícula e a identificação da ocorrência serão detalhadas após conferência das fontes.</p><a href="#biblioteca">Acompanhar documentação ↗</a></article>
+        <article class="card"><span class="card-number">03 / AVIAÇÃO NAVAL</span><h3>Consolidated PBY Catalina</h3><p><strong>Local indicado na pesquisa:</strong> região dos Lençóis, município de Santo Amaro do Maranhão (MA). A ficha será complementada com a variante, o BuNo, a tripulação e os registros oficiais do acidente.</p><a href="#biblioteca">Acompanhar documentação ↗</a></article>
+      </div>
+      <p class="disclaimer">Este é um inventário preliminar de ocorrências informadas pelo pesquisador. A inclusão no portal não substitui a confirmação documental de cada localização, identificação de aeronave ou circunstância do acidente. Novas máquinas e ocorrências estão previstas para apresentação na segunda edição do livro, planejada para março de 2027.</p>
+    </div></section>
+
+    <section class="timeline"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">Contexto histórico</div><h2>Uma linha do tempo<br>para orientar a pesquisa.</h2></div><p class="section-intro">Marcos iniciais para organizar a documentação. A cronologia detalhada deverá ser acompanhada de fontes e referências específicas.</p></div>
+      <div class="timeline-list">
+        <div class="time-item"><strong>1943</strong><p>Acidente do B-25D Mitchell no litoral de Humberto de Campos, Maranhão.</p></div>
+        <div class="time-item"><strong>1943–1945</strong><p>Período de operações aliadas e circulação aérea e marítima no Atlântico Sul.</p></div>
+        <div class="time-item"><strong>2021</strong><p>Identificação e investigação dos destroços do B-25D no litoral maranhense.</p></div>
+        <div class="time-item"><strong>2026</strong><p>Participação de Wellington Matos no IHGM e em reunião inicial sobre a proposta de inventário da Segunda Guerra no Maranhão.</p></div>
+      </div>
+    </div></section>
+
+    <section class="books" id="livros"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">Produção bibliográfica</div><h2>Livros e projetos editoriais.</h2></div><p class="section-intro">Publicações que registram pesquisas, narrativas, memória e expressão cultural. Capas e links comerciais poderão ser inseridos após validação dos arquivos e endereços oficiais.</p></div>
+      <div class="book-grid">
+        <article class="book"><div class="book-cover"><small>Wellington Matos</small><b>A II Guerra no Chão do Brasil</b><small>História · Pesquisa</small></div><div class="book-info"><h3>A II Guerra Mundial no Chão do Brasil</h3><p>Pesquisa histórica sobre episódios e vestígios da Segunda Guerra Mundial em território brasileiro. Segunda edição planejada para março de 2027, com novas máquinas e ocorrências a serem apresentadas.</p></div></article>
+        <article class="book"><div class="book-cover sand"><small>Wellington Matos</small><b>Entre Areias e Castelos</b><small>Memória · História</small></div><div class="book-info"><h3>Entre Areias e Castelos</h3><p>A história do pracinha Claudovino Madaleno e a memória da Força Expedicionária Brasileira.</p></div></article>
+        <article class="book"><div class="book-cover blue"><small>Wellington Matos</small><b>Brilho Âmbar</b><small>Pesquisa · Relatos</small></div><div class="book-info"><h3>Brilho Âmbar</h3><p>Casos de fenômenos luminosos, pesquisa e registro de relatos.</p></div></article>
+        <article class="book"><div class="book-cover sand"><small>Wellington Matos</small><b>Toadas das Taboas</b><small>Crônicas · Poesia</small></div><div class="book-info"><h3>Toadas das Taboas</h3><p>Crônicas e poemas sonoros ligados à cultura e à expressão popular.</p></div></article>
+        <article class="book"><div class="book-cover blue"><small>Wellington Matos</small><b>Fragmentos</b><small>Poemas</small></div><div class="book-info"><h3>Fragmentos</h3><p>Poemas, uma das primeiras publicações do autor.</p></div></article>
+        <article class="book"><div class="book-cover"><small>Wellington Matos</small><b>Atlas do Cenário de São Bento</b><small>Geografia</small></div><div class="book-info"><h3>Atlas do Cenário de São Bento</h3><p>Cartografia, território e leitura geográfica municipal.</p></div></article>
+      </div>
+    </div></section>
+
+    <section id="inventario"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">Projeto em desenvolvimento</div><h2>Inventário da Segunda Guerra Mundial no Maranhão.</h2></div><p class="section-intro">Uma proposta de pesquisa e salvaguarda para identificar, documentar e valorizar acervos, vestígios materiais, documentos e testemunhos relacionados ao conflito.</p></div>
+      <div class="cards">
+        <article class="card"><span class="card-number">EIXO 01</span><h3>Identificar</h3><p>Levantar ocorrências, sítios históricos, aeronaves, naufrágios, estruturas, objetos e coleções particulares.</p></article>
+        <article class="card"><span class="card-number">EIXO 02</span><h3>Documentar</h3><p>Reunir fontes primárias, fotografias, depoimentos, dados geográficos, referências e registros de procedência.</p></article>
+        <article class="card"><span class="card-number">EIXO 03</span><h3>Preservar</h3><p>Propor medidas de conservação, salvaguarda, acesso público e cooperação com instituições competentes.</p></article>
+      </div>
+      <p class="disclaimer">Este portal apresenta uma proposta de organização e divulgação de pesquisa. Não representa, por si só, um projeto oficialmente aprovado, executado ou mantido pelo IHGM ou por qualquer outra instituição. A participação institucional e as responsabilidades deverão ser descritas conforme documentação e deliberações formais.</p>
+    </div></section>
+
+    <section id="biblioteca"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">Biblioteca de pesquisa</div><h2>Fontes, documentos e referências.</h2></div><p class="section-intro">Área preparada para organizar reportagens, documentos oficiais, registros bibliográficos, acervos e artigos relacionados às pesquisas.</p></div>
+      <div class="library-tools"><input class="searchbox" id="resourceSearch" type="search" placeholder="Buscar por tema, fonte ou documento..." aria-label="Buscar referências"><button class="filter active" data-filter="todos">Todos</button><button class="filter" data-filter="imprensa">Imprensa</button><button class="filter" data-filter="documentos">Documentos</button><button class="filter" data-filter="publicacoes">Publicações</button></div>
+      <div class="resource-list" id="resourceList">
+        <article class="resource" data-category="imprensa"><small>Imprensa · B-25D</small><h3>Reportagens sobre os destroços do B-25D</h3><p>Espaço para reunir matérias da CNN Brasil, Estadão, O Globo, G1 e outros veículos, com título, data, autoria e link para a publicação original.</p></article>
+        <article class="resource" data-category="documentos"><small>Documentos · Aviação militar</small><h3>Registros de acidente e tripulação</h3><p>Espaço para relatórios militares, fichas de aeronave, listas de tripulantes, documentos de arquivo e referências de consulta.</p></article>
+        <article class="resource" data-category="publicacoes"><small>Publicações · Livro</small><h3>A II Guerra Mundial no Chão do Brasil</h3><p>Ficha bibliográfica, ISBN, dados editoriais, apresentação da obra e canais oficiais de aquisição.</p></article>
+        <article class="resource" data-category="documentos"><small>Documentos · Patrimônio</small><h3>Inventário de vestígios materiais</h3><p>Fichas de identificação, localização, estado de conservação, procedência, situação de custódia e documentação associada.</p></article>
+      </div>
+      <div class="empty" id="emptyState">Nenhum item corresponde à busca. Experimente outro termo ou filtro.</div>
+    </div></section>
+
+    <section class="contact" id="contato"><div class="wrap contact-grid">
+      <div><div class="kicker">Contato e colaboração</div><h2>Vamos documentar a história.</h2><p>Este canal é destinado a pesquisadores, instituições, jornalistas, familiares, colecionadores e moradores que possuam documentos, fotografias, relatos ou informações relevantes sobre a Segunda Guerra Mundial no Maranhão.</p><p>O recebimento de informações não implica autorização automática para publicação. Toda contribuição deverá ter sua procedência registrada e seu uso acordado com o colaborador.</p></div>
+      <form class="contact-form" id="contactForm"><input id="contactName" type="text" placeholder="Seu nome" required><input id="contactEmail" type="email" placeholder="Seu e-mail" required><input id="contactSubject" type="text" placeholder="Assunto: pesquisa, documento, entrevista..." required><button class="button gold" type="submit">Preparar mensagem ↗</button><div class="form-note" id="formNote">Protótipo demonstrativo: o botão prepara uma mensagem no seu aplicativo de e-mail. O endereço oficial de contato será configurado na publicação do site.</div></form>
+    </div></section>
+  </main>
+  <footer><div class="wrap footer-row"><div><div class="footer-name">Wellington Matos</div><div>Escritor · Pesquisador · Geógrafo · Compositor</div></div><div>© 2026 · Portal de pesquisa, história e memória.</div><div><a href="#inicio">Voltar ao início ↑</a></div></div></footer>
+</div>
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navlinks = document.getElementById('navlinks');
+menuToggle.addEventListener('click', () => {
+  const open = navlinks.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(open));
+});
+navlinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  navlinks.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded', 'false');
+}));
+let activeFilter = 'todos';
+const search = document.getElementById('resourceSearch');
+const resources = [...document.querySelectorAll('.resource')];
+const emptyState = document.getElementById('emptyState');
+function filterResources() {
+  const term = search.value.toLocaleLowerCase('pt-BR').trim();
+  let visible = 0;
+  resources.forEach(item => {
+    const categoryMatch = activeFilter === 'todos' || item.dataset.category === activeFilter;
+    const textMatch = item.innerText.toLocaleLowerCase('pt-BR').includes(term);
+    const show = categoryMatch && textMatch;
+    item.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  emptyState.style.display = visible ? 'none' : 'block';
+}
+search.addEventListener('input', filterResources);
+document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => {
+  document.querySelectorAll('.filter').forEach(item => item.classList.remove('active'));
+  button.classList.add('active');
+  activeFilter = button.dataset.filter;
+  filterResources();
+}));
+document.getElementById('contactForm').addEventListener('submit', event => {
+  event.preventDefault();
+  const name = document.getElementById('contactName').value.trim();
+  const email = document.getElementById('contactEmail').value.trim();
+  const subject = document.getElementById('contactSubject').value.trim();
+  const body = `Nome: ${name}\nE-mail: ${email}\n\nMensagem: Gostaria de entrar em contato sobre: ${subject}.`;
+  document.getElementById('formNote').textContent = 'O endereço oficial ainda será configurado. Copie os dados preenchidos para encaminhar sua mensagem quando o contato estiver disponível.';
+  const mail = `mailto:?subject=${encodeURIComponent('Contato pelo portal Wellington Matos')}&body=${encodeURIComponent(body)}`;
+  window.location.href = mail;
+});
+</script>
+</body>
+</html>
