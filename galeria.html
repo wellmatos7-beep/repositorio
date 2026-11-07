@@ -208,6 +208,49 @@
     }
     .photo-note { margin: 18px 0 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
 
+    .contact-section {
+      margin: 0 0 48px;
+      padding: 36px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      box-shadow: 0 12px 30px rgba(24,34,27,.055);
+      scroll-margin-top: 25px;
+    }
+    .contact-section .section-heading { margin-bottom: 24px; }
+    .contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 42px; }
+    .contact-group h3 {
+      margin: 0 0 14px;
+      color: var(--green);
+      font: 20px Georgia, "Times New Roman", serif;
+    }
+    .contact-list, .social-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .contact-list { grid-template-columns: 1fr; }
+    .contact-list a, .social-list a {
+      display: block;
+      padding: 11px 13px;
+      border: 1px solid var(--line);
+      background: #faf8f2;
+      color: var(--ink);
+      font-size: 12px;
+      line-height: 1.45;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+      transition: border-color .2s ease, background .2s ease, color .2s ease;
+    }
+    .contact-list a:hover, .social-list a:hover {
+      border-color: var(--gold);
+      background: #f4efe3;
+      color: var(--green-dark);
+    }
+    .contact-label { display: block; margin-bottom: 3px; color: var(--muted); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+
     .home-cta {
       display: flex;
       flex-wrap: wrap;
@@ -270,6 +313,7 @@
       .section-heading { align-items: flex-start; flex-direction: column; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
       .hero { padding: 64px 0 70px; }
+      .contact-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 520px) {
       .nav, .hero-inner, main, .footer-inner { width: calc(100% - 32px); }
@@ -281,6 +325,8 @@
       main { padding-top: 44px; }
       .gallery-section { margin-bottom: 54px; padding-bottom: 40px; }
       .gallery { grid-template-columns: 1fr; gap: 18px; }
+      .contact-section { padding: 24px 18px; }
+      .social-list { grid-template-columns: 1fr; }
       .home-cta { padding: 24px 20px; }
       .home-cta p { font-size: 21px; }
     }
@@ -309,6 +355,7 @@
           <a href="#pesquisador">Wellington Matos</a>
           <a href="#pesquisa">Pesquisa e território</a>
           <a href="#livros">Livros e publicações</a>
+          <a href="#contato">Contato e redes</a>
         </nav>
       </div>
     </div>
@@ -351,6 +398,37 @@
         <figure><button class="image-button" type="button" aria-label="Ampliar foto 4 de livro de Wellington Matos"><img src="LivroWellingtonMatos_Foto4%20-%20Copia.jpg" alt="Livro de Wellington Matos — foto 4"></button><figcaption>Livro 4 <span class="caption-detail">Capa e identificação</span></figcaption></figure>
         <figure><button class="image-button" type="button" aria-label="Ampliar foto 6 de livro de Wellington Matos"><img src="LivroWellingtonMatos_Foto6%20-%20Copia.png" alt="Livro de Wellington Matos — foto 6"></button><figcaption>Livro 6 <span class="caption-detail">Material de divulgação</span></figcaption></figure>
         <figure><button class="image-button" type="button" aria-label="Ampliar foto 7 de livro de Wellington Matos"><img src="LivroWellingtonMatos_Foto7%20-%20Copia.png" alt="Livro de Wellington Matos — foto 7"></button><figcaption>Livro 7 <span class="caption-detail">Arquivo da produção editorial</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato" aria-labelledby="contact-title">
+      <div class="section-heading">
+        <div><div class="section-kicker">Fale comigo</div><h2 id="contact-title">Contato e redes</h2></div>
+        <p class="section-note">Acompanhe e entre em contato</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-group">
+          <h3>Contato direto</h3>
+          <ul class="contact-list">
+            <li><a href="https://wa.me/5598981171374" target="_blank" rel="noopener noreferrer"><span class="contact-label">WhatsApp</span>+55 (98) 98117-1374</a></li>
+            <li><a href="mailto:wellmatos@hotmail.com"><span class="contact-label">E-mail</span>wellmatos@hotmail.com</a></li>
+          </ul>
+        </div>
+        <div class="contact-group">
+          <h3>Redes e plataformas</h3>
+          <ul class="social-list">
+            <li><a href="https://facebook.com/wellmatos" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://instagram.com/wellmatos_music" target="_blank" rel="noopener noreferrer">Instagram · @wellmatos_music</a></li>
+            <li><a href="https://twitter.com/@wellmatos_alem" target="_blank" rel="noopener noreferrer">Twitter · @wellmatos_alem</a></li>
+            <li><a href="https://music.youtube.com/@wellmatos-music" target="_blank" rel="noopener noreferrer">YouTube Music</a></li>
+            <li><a href="https://tiktok.com/@wellmatos-music" target="_blank" rel="noopener noreferrer">TikTok · @wellmatos-music</a></li>
+            <li><a href="https://br.pinterest.com/wellmatos7" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+            <li><a href="https://soundbetter.com/profiles/606337-well-matos" target="_blank" rel="noopener noreferrer">SoundBetter</a></li>
+            <li><a href="https://open.spotify.com/intl-pt/artist/7MTfzX5OmGJE3bVb8IeNdb" target="_blank" rel="noopener noreferrer">Spotify</a></li>
+            <li><a href="https://soundon.global/bio/wellmatos" target="_blank" rel="noopener noreferrer">SoundOn</a></li>
+            <li><a href="https://isni.org/isni/0000000530606430" target="_blank" rel="noopener noreferrer">ISNI · Identificador internacional</a></li>
+          </ul>
+        </div>
       </div>
     </section>
 
