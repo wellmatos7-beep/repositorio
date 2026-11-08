@@ -31,8 +31,9 @@
     .eyebrow { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: .8rem; font-weight: 700; }
     h1 { font-family: var(--serif); font-size: clamp(2.4rem, 4vw, 3.5rem); margin: 0 0 .75rem; color: var(--deep); line-height: 1.08; }
     .meta { color: var(--muted); margin-bottom: 1.75rem; font-size: .96rem; }
-    .hero-image { border-radius: 18px; overflow: hidden; border: 1px solid var(--line); margin: 0 0 1.8rem; box-shadow: 0 10px 24px rgba(23, 37, 31, .06); }
+    .hero-image { overflow: hidden; border: 1px solid var(--line); border-radius: 18px; margin: 0 0 1.8rem; background: #fff; box-shadow: 0 10px 24px rgba(23, 37, 31, .06); }
     .hero-image img { width: 100%; max-height: 520px; object-fit: cover; }
+    .hero-image figcaption { padding: .8rem 1rem; color: var(--muted); font-size: .88rem; border-top: 1px solid var(--line); }
     .article-body { background: rgba(255,255,255,.55); border: 1px solid var(--line); border-radius: 18px; padding: clamp(1.2rem, 2vw, 2rem); }
     .article-body p { margin: 0 0 1.2rem; font-size: 1.06rem; }
     .article-body p:last-child { margin-bottom: 0; }
@@ -57,7 +58,8 @@
       <div class="meta">Por Wellington Matos · 2026</div>
 
       <figure class="hero-image">
-        <img src="../Imagens%20e%20Fotos/CaminhaoOpelBlitz_ProjetoAMA.Foto1.jpg" alt="Caminhão Opel Blitz do Projeto AMA, em São Bento, Maranhão">
+        <img src="../Imagens%20e%20Fotos/CaminhaoOpelBlitz_ProjetoAMA.Foto1.jpg" alt="Caminhão Opel Blitz associado ao Projeto AMA" fetchpriority="high">
+        <figcaption>Registro de caminhão Opel Blitz associado ao Projeto AMA, em São Bento, Maranhão.</figcaption>
       </figure>
 
       <article class="article-body">
