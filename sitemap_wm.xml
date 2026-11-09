@@ -1,35 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-       <loc>https://wellingtonmatos.com.br/</loc>
-       <lastmod>2026-11-08T22:16:14+00:00</lastmod>
-       <priority>1.0000</priority>
+    <loc>https://wellingtonmatos.com.br/</loc>
   </url>
   <url>
-       <loc>https://wellingtonmatos.com.br/artigos</loc>
-       <lastmod>2026-11-08T22:16:14+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://wellingtonmatos.com.br/artigos.html</loc>
   </url>
   <url>
-       <loc>https://wellingtonmatos.com.br/galeria</loc>
-       <lastmod>2026-11-08T22:16:14+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://wellingtonmatos.com.br/galeria.html</loc>
   </url>
   <url>
-       <loc>https://wellingtonmatos.com.br/artigos/caminhoes-de-hitler-no-brasil</loc>
-       <lastmod>2026-11-08T22:16:14+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://wellingtonmatos.com.br/artigos/caminhoes-de-hitler-no-brasil.html</loc>
   </url>
   <url>
-       <loc>https://wellingtonmatos.com.br/artigos/memoria-e-patrimonio-no-brasil</loc>
-       <lastmod>2026-11-08T22:16:14+00:00</lastmod>
-       <priority>0.6400</priority>
+    <loc>https://wellingtonmatos.com.br/artigos/memoria-e-patrimonio-no-brasil.html</loc>
   </url>
   <url>
-       <loc>https://wellingtonmatos.com.br/perguntas-frequentes</loc>
-       <lastmod>2026-11-08T22:16:14+00:00</lastmod>
-       <priority>0.4096</priority>
+    <loc>https://wellingtonmatos.com.br/perguntas-frequentes.html</loc>
   </url>
 </urlset>
