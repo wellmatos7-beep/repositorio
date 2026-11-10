@@ -15,18 +15,7 @@
   <meta property="og:url" content="https://wellingtonmatos.com.br/">
   <title>Wellington Matos | História, Pesquisa e Memória</title>
   <style>
-    :root {
-      --green: #243b32;
-      --deep: #17251f;
-      --gold: #c49a5a;
-      --paper: #f3f0e8;
-      --ink: #202720;
-      --muted: #667067;
-      --line: #d8d3c7;
-      --white: #fffdf8;
-      --serif: Georgia, "Times New Roman", serif;
-      --sans: Inter, Arial, Helvetica, sans-serif;
-    }
+    :root { --green: #243b32; --deep: #17251f; --gold: #c49a5a; --paper: #f3f0e8; --ink: #202720; --muted: #667067; --line: #d8d3c7; --white: #fffdf8; --serif: Georgia, "Times New Roman", serif; --sans: Inter, Arial, Helvetica, sans-serif; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 85px; }
     body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.65; }
@@ -95,27 +84,8 @@
     footer { padding: 1.4rem 0; background: #111b15; color: #aeb8b0; font-size: .9rem; }
     .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
     .footer-name { color: #e5d7ba; font: 1.15rem var(--serif); }
-    @media (max-width: 850px) {
-      .menu-toggle { display: block; }
-      .navlinks { display: none; position: absolute; top: 76px; left: 0; right: 0; padding: 1rem; flex-direction: column; align-items: flex-start; background: var(--white); border-bottom: 1px solid var(--line); }
-      .navlinks.open { display: flex; }
-      .hero-grid, .about-grid, .feature-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .hero-grid { padding: 3.5rem 0; }
-      .hero-photo { width: min(100%, 480px); justify-self: center; }
-      .cards { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 560px) {
-      .wrap { width: calc(100% - 2rem); }
-      section { padding: 3.5rem 0; }
-      .hero-photo img { height: 300px; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .stat:nth-child(3) { border-top: 1px solid var(--line); }
-      .stat:nth-child(4) { border-top: 1px solid var(--line); }
-      .cards { grid-template-columns: 1fr; }
-      .about-photo img, .feature-photo img { height: 300px; }
-      .article-card { align-items: flex-start; flex-direction: column; }
-      .footer-row { align-items: flex-start; flex-direction: column; }
-    }
+    @media (max-width: 850px) { .menu-toggle { display: block; } .navlinks { display: none; position: absolute; top: 76px; left: 0; right: 0; padding: 1rem; flex-direction: column; align-items: flex-start; background: var(--white); border-bottom: 1px solid var(--line); } .navlinks.open { display: flex; } .hero-grid, .about-grid, .feature-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; } .hero-grid { padding: 3.5rem 0; } .hero-photo { width: min(100%, 480px); justify-self: center; } .cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .wrap { width: calc(100% - 2rem); } section { padding: 3.5rem 0; } .hero-photo img { height: 300px; } .stats-grid { grid-template-columns: repeat(2, 1fr); } .stat:nth-child(3) { border-top: 1px solid var(--line); } .stat:nth-child(4) { border-top: 1px solid var(--line); } .cards { grid-template-columns: 1fr; } .about-photo img, .feature-photo img { height: 300px; } .article-card { align-items: flex-start; flex-direction: column; } .footer-row { align-items: flex-start; flex-direction: column; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
@@ -142,7 +112,7 @@
         <div>
           <div class="eyebrow">Pesquisa histórica e memória brasileira</div>
           <h1>História que<br><em>resiste ao tempo.</em></h1>
-          <p class="hero-copy">Wellington Matos é escritor, pesquisador, geógrafo e compositor. Dedica-se à pesquisa histórica, à memória da Segunda Guerra Mundial no Brasil e à valorização do patrimônio material e documental.</p>
+          <p class="hero-copy">Wellington Matos é escritor, pesquisador, geógrafo e compositor. Dedica-se à pesquisa histórica, à memória da Segunda Guerra Mundial no Brasil e à valorização do patrimônio cultural e territorial.</p>
           <div class="hero-actions">
             <a class="button gold" href="#pesquisas">Conheça as pesquisas ↗</a>
             <a class="button outline" href="artigos.html">Ler artigos ↗</a>
@@ -204,7 +174,10 @@
           <div class="kicker">Dossiê em destaque</div>
           <h2>O B-25D Mitchell e a memória da guerra no Maranhão.</h2>
           <p>A investigação dos destroços do bombardeiro norte-americano North American B-25D Mitchell, acidentado no litoral de Humberto de Campos (MA), em maio de 1943, é um eixo central da pesquisa sobre a Segunda Guerra Mundial no Brasil.</p>
-          <a class="button gold" href="galeria.html#pesquisa">Ver imagens da pesquisa ↗</a>
+          <div class="hero-actions">
+            <a class="button gold" href="artigos/aviao-b25d-segunda-guerra-mundial.html">Ler artigo do B-25D ↗</a>
+            <a class="button outline" href="galeria.html#pesquisa">Ver imagens da pesquisa ↗</a>
+          </div>
         </div>
       </div>
     </section>
@@ -217,6 +190,7 @@
           <p class="section-intro">Textos sobre história, memória e patrimônio brasileiro.</p>
         </div>
         <div class="article-list">
+          <article class="article-card"><div><h3>Avião B-25D e a II Guerra Mundial</h3><p>Referência histórica sobre o bombardeiro Mitchell e o acidente no litoral maranhense.</p></div><a class="text-link" href="artigos/aviao-b25d-segunda-guerra-mundial.html">Ler artigo ↗</a></article>
           <article class="article-card"><div><h3>Caminhões de Hitler no Brasil</h3><p>O “Mondrongo dos Padres” e os caminhões Opel Blitz do Projeto AMA.</p></div><a class="text-link" href="artigos/caminhoes-de-hitler-no-brasil.html">Ler artigo ↗</a></article>
           <article class="article-card"><div><h3>Memória e patrimônio no Brasil</h3><p>Reflexões sobre vestígios, memória coletiva e preservação.</p></div><a class="text-link" href="artigos/memoria-e-patrimonio-no-brasil.html">Ler artigo ↗</a></article>
         </div>
@@ -226,14 +200,14 @@
 
     <section class="contact" id="contato">
       <div class="wrap contact-grid">
-        <div><div class="kicker">Contato e colaboração</div><h2>Vamos documentar a história.</h2><p>Canal destinado a pesquisadores, instituições, jornalistas, familiares, colecionadores e moradores com documentos, fotografias, relatos ou informações relevantes sobre a Segunda Guerra Mundial no Maranhão.</p></div>
+        <div><div class="kicker">Contato e colaboração</div><h2>Vamos documentar a história.</h2><p>Canal destinado a pesquisadores, instituições, jornalistas, familiares, colecionadores e interessados em memória e patrimônio.</p></div>
         <div><p>Para contato profissional, envie uma mensagem para <a href="mailto:wellmatos@hotmail.com?subject=Contato%20pelo%20portal%20Wellington%20Matos">wellmatos@hotmail.com</a>.</p><a class="button gold" href="mailto:wellmatos@hotmail.com?subject=Contato%20pelo%20portal%20Wellington%20Matos">Enviar e-mail ↗</a></div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap footer-row"><div><div class="footer-name">Wellington Matos</div><div>Escritor · Pesquisador · Geógrafo · Compositor</div></div><div>© 2026 · Pesquisa, história e memória</div><a href="#inicio">Voltar ao início ↑</a></div>
+    <div class="wrap footer-row"><div><div class="footer-name">Wellington Matos</div><div>Escritor · Pesquisador · Geógrafo · Compositor</div></div><div>© 2026 · Pesquisa, história e memória</div></div>
   </footer>
 
   <script>
