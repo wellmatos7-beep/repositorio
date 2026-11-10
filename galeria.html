@@ -58,7 +58,7 @@
     .books-link:hover { background: var(--green-dark); }
     .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
     .gallery.dual { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    figure { position: relative; margin: 0; display: flex; flex-direction: column; min-height: 100%; background: var(--white); border: 1px solid var(--line); box-shadow: 0 12px 30px rgba(24,34,27,.075); transition: transform .25s ease, box-shadow .25s ease; }
+    figure { position: relative; margin: 0; display: flex; flex-direction: column; min-height: 100%; background: var(--white); border: 1px solid var(--line); box-shadow: 0 12px 30px rgba(24,34,27,.06); transition: transform .2s ease, box-shadow .2s ease; }
     figure:hover { transform: translateY(-3px); box-shadow: 0 18px 36px rgba(24,34,27,.12); }
     .image-button { display: block; width: 100%; padding: 0; border: 0; background: #e3ded1; cursor: zoom-in; overflow: hidden; }
     figure img { display: block; width: 100%; aspect-ratio: 4 / 3; height: auto; object-fit: cover; transition: transform .45s ease; }
@@ -77,7 +77,7 @@
     .contact-list a, .social-list a { display: block; padding: 11px 13px; border: 1px solid var(--line); background: #faf8f2; color: var(--ink); font-size: 12px; line-height: 1.45; text-decoration: none; }
     .contact-list a:hover, .social-list a:hover { border-color: var(--gold); background: #f4efe3; color: var(--green-dark); }
     .contact-label { display: block; margin-bottom: 3px; color: var(--muted); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
-    .home-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px; padding: 30px 32px; border: 1px solid rgba(196,154,90,.55); background: linear-gradient(135deg, rgba(196,154,90,.12), rgba(21,30,26,.03)); }
+    .home-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px; padding: 30px 32px; border: 1px solid rgba(196,154,90,.55); background: linear-gradient(135deg, rgba(196,154,90,.12), rgba(36,59,50,.1)); }
     .home-cta p { max-width: 600px; margin: 0; font: 24px/1.3 Georgia, serif; }
     .home-cta a { padding: 13px 17px; background: var(--gold); color: #1d261f; font-size: 11px; font-weight: 750; letter-spacing: .04em; text-decoration: none; transition: background .2s ease; }
     .home-cta a:hover { background: var(--gold-light); }
@@ -137,6 +137,7 @@
         <nav class="hero-nav" aria-label="Ir para uma seção da galeria">
           <a href="#pesquisador">Wellington Matos</a>
           <a href="#pesquisa">Pesquisa e território</a>
+          <a href="#arquivo">Arquivo visual</a>
           <a href="#livros">Livros e publicações</a>
           <a href="#contato">Contato e redes</a>
         </nav>
@@ -151,11 +152,11 @@
         <p class="section-note">Fotografias do acervo</p>
       </div>
       <div class="gallery">
-        <figure><button class="image-button" type="button" aria-label="Ampliar foto 1 de Wellington Matos"><img src="Imagens%20e%20Fotos/WellingtonMatos.Foto1.png.jpg" alt="Wellington Matos — foto de retrato"><figcaption>Wellington Matos <span class="caption-detail">Retrato pessoal</span></figcaption></button></figure>
-        <figure><button class="image-button" type="button" aria-label="Ampliar foto 2 de Wellington Matos"><img src="Imagens%20e%20Fotos/WellingtonMatos.Foto2.png.png" alt="Wellington Matos — foto de retrato"><figcaption>Wellington Matos <span class="caption-detail">Acervo e memória</span></figcaption></button></figure>
-        <figure><button class="image-button" type="button" aria-label="Ampliar foto 3 de Wellington Matos"><img src="Imagens%20e%20Fotos/WellingtonMatos.Foto4.png.png" alt="Wellington Matos — foto de retrato"><figcaption>Wellington Matos <span class="caption-detail">Registro visual</span></figcaption></button></figure>
-        <figure><button class="image-button" type="button" aria-label="Ampliar foto 4 de Wellington Matos"><img src="Imagens%20e%20Fotos/WellingtonMatos.Foto5.png.png" alt="Wellington Matos — foto de retrato"><figcaption>Wellington Matos <span class="caption-detail">Arquivo pessoal</span></figcaption></button></figure>
-        <figure><button class="image-button" type="button" aria-label="Ampliar foto 5 de Wellington Matos"><img src="Imagens%20e%20Fotos/WellingtonMatos.Foto6.png.jpg" alt="Wellington Matos — foto de retrato"><figcaption>Wellington Matos <span class="caption-detail">Arquivo pessoal</span></figcaption></button></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar foto 1 de Wellington Matos"><img src="Imagens%20e%20Fotos/WellingtonMatos.Foto1.png.jpg" alt="Wellington Matos — foto do acervo pessoal"></button><figcaption>Wellington Matos<span class="caption-detail">Acervo fotográfico</span></figcaption></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar foto 2 de Wellington Matos"><img src="Imagens%20e%20Fotos/WellingtonMatos.Foto2.png.png" alt="Wellington Matos — registro documental"></button><figcaption>Registro documental<span class="caption-detail">Arquivo pessoal</span></figcaption></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar foto 3 de Wellington Matos"><img src="Imagens%20e%20Fotos/WellingtonMatos.Foto4.png.png" alt="Wellington Matos — retrato do pesquisador"></button><figcaption>Retrato do pesquisador<span class="caption-detail">Arquivo visual</span></figcaption></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar foto 4 de Wellington Matos"><img src="Imagens%20e%20Fotos/WellingtonMatos.Foto5.png.png" alt="Wellington Matos em estudo histórico"></button><figcaption>Estudo histórico<span class="caption-detail">Memória e pesquisa</span></figcaption></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar foto 5 de Wellington Matos"><img src="Imagens%20e%20Fotos/WellingtonMatos.Foto6.png.jpg" alt="Wellington Matos em pesquisa e produção"></button><figcaption>Pesquisa e produção<span class="caption-detail">Arquivo de trabalho</span></figcaption></figure>
       </div>
       <p class="photo-note">As imagens e legendas podem ser atualizadas com datas, locais e créditos específicos quando essas informações forem confirmadas.</p>
     </section>
@@ -180,6 +181,20 @@
       </div>
     </section>
 
+    <section class="gallery-section" id="arquivo" aria-labelledby="archive-title">
+      <div class="section-heading">
+        <div><div class="section-kicker">Arquivo visual</div><h2 id="archive-title">Fotos do acervo recente</h2></div>
+      </div>
+      <div class="gallery">
+        <figure><button class="image-button" type="button" aria-label="Ampliar imagem do aeroporto São Luís"><img src="Imagens%20e%20Fotos/AeroportoSaoLuis1940FotoArquivoPublico.jpg" alt="Aeroporto de São Luís em 1940 — foto do arquivo público"></button><figcaption>Aeroporto de São Luís<span class="caption-detail">Arquivo histórico · 1940</span></figcaption></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar imagem do trem de pouso B-25D"><img src="Imagens%20e%20Fotos/TremPousoB25D_FotoWellingtonMatos.jpg" alt="Trem de pouso do B-25D — foto do acervo de Wellington Matos"></button><figcaption>Trem de pouso do B-25D<span class="caption-detail">Avião e memória</span></figcaption></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar imagem de Ilha Grande"><img src="Imagens%20e%20Fotos/IlhaGrande_Hum.DeCampos.FotoWellingtonMatos.jpg" alt="Ilha Grande em Humberto de Campos — foto de Wellington Matos"></button><figcaption>Ilha Grande<span class="caption-detail">Humberto de Campos · Maranhão</span></figcaption></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar matéria em jornal"><img src="Imagens%20e%20Fotos/JornalEstadoSaoPaulo.FotoAlmirPrazeres.jpg" alt="Matéria em jornal com foto de Almir Prazeres"></button><figcaption>Matéria em jornal<span class="caption-detail">Cobertura e imprensa</span></figcaption></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar imagem documental do B-25D"><img src="Imagens%20e%20Fotos/FotoDestroçosB25D.Foto_AlmirPrazeres.webp" alt="Destroços do B-25D — foto de Almir Prazeres"></button><figcaption>Destroços do B-25D<span class="caption-detail">Foto de Almir Prazeres</span></figcaption></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar imagem de pesquisa no Maranhão"><img src="Imagens%20e%20Fotos/MateriaEstadão_WellingtonMatos.jpg" alt="Matéria do Estadão sobre a pesquisa de Wellington Matos"></button><figcaption>Pesquisa em destaque<span class="caption-detail">Estadão · cobertura</span></figcaption></figure>
+      </div>
+    </section>
+
     <section class="gallery-section books" id="livros" aria-labelledby="books-title">
       <div class="section-heading">
         <div><div class="section-kicker">Produção bibliográfica</div><h2 id="books-title">Livros e publicações</h2></div>
@@ -189,12 +204,12 @@
         </div>
       </div>
       <div class="gallery">
-        <figure><button class="image-button" type="button" aria-label="Ampliar foto 1 de livro de Wellington Matos"><img src="LivroWellingtonMatos_Foto1.jpg" alt="Livro de Wellington Matos — capa"><figcaption>Livro <span class="caption-detail">Publicação</span></figcaption></button></figure>
-        <figure><button class="image-button" type="button" aria-label="Ampliar foto 2 de livro de Wellington Matos"><img src="LivroWellingtonMatos_Foto2.png" alt="Livro de Wellington Matos — capa"><figcaption>Livro <span class="caption-detail">Coleção</span></figcaption></button></figure>
-        <figure><button class="image-button" type="button" aria-label="Ampliar foto 3 de livro de Wellington Matos"><img src="LivroWellingtonMatos_Foto3.jpg" alt="Livro de Wellington Matos — capa"><figcaption>Livro <span class="caption-detail">Registro bibliográfico</span></figcaption></button></figure>
-        <figure><button class="image-button" type="button" aria-label="Ampliar foto 4 de livro de Wellington Matos"><img src="LivroWellingtonMatos_Foto4%20-%20Copia.jpg" alt="Livro de Wellington Matos — capa"><figcaption>Livro <span class="caption-detail">Acervo</span></figcaption></button></figure>
-        <figure><button class="image-button" type="button" aria-label="Ampliar foto 6 de livro de Wellington Matos"><img src="LivroWellingtonMatos_Foto6%20-%20Copia.png" alt="Livro de Wellington Matos — capa"><figcaption>Livro <span class="caption-detail">Produção</span></figcaption></button></figure>
-        <figure><button class="image-button" type="button" aria-label="Ampliar foto 7 de livro de Wellington Matos"><img src="LivroWellingtonMatos_Foto7%20-%20Copia.png" alt="Livro de Wellington Matos — capa"><figcaption>Livro <span class="caption-detail">Publicação</span></figcaption></button></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar foto 1 de livro de Wellington Matos"><img src="LivroWellingtonMatos_Foto1.jpg" alt="Livro de Wellington Matos — capa e registro"></button><figcaption>Livro de Wellington Matos<span class="caption-detail">Capa e apresentação</span></figcaption></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar foto 2 de livro de Wellington Matos"><img src="LivroWellingtonMatos_Foto2.png" alt="Livro de Wellington Matos — edição e apresentação"></button><figcaption>Publicação histórica<span class="caption-detail">Registro editorial</span></figcaption></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar foto 3 de livro de Wellington Matos"><img src="LivroWellingtonMatos_Foto3.jpg" alt="Livro de Wellington Matos — imagem detalhada de capa"></button><figcaption>Detalhe da capa<span class="caption-detail">Produção editorial</span></figcaption></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar foto 4 de livro de Wellington Matos"><img src="LivroWellingtonMatos_Foto4%20-%20Copia.jpg" alt="Livro de Wellington Matos — registro visual"></button><figcaption>Registro visual<span class="caption-detail">Acervo de publicação</span></figcaption></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar foto 6 de livro de Wellington Matos"><img src="LivroWellingtonMatos_Foto6%20-%20Copia.png" alt="Livro de Wellington Matos — capa em destaque"></button><figcaption>Capa em destaque<span class="caption-detail">Obra e pesquisa</span></figcaption></figure>
+        <figure><button class="image-button" type="button" aria-label="Ampliar foto 7 de livro de Wellington Matos"><img src="LivroWellingtonMatos_Foto7%20-%20Copia.png" alt="Livro de Wellington Matos — edição ilustrada"></button><figcaption>Edição ilustrada<span class="caption-detail">Memória visual</span></figcaption></figure>
       </div>
     </section>
 
