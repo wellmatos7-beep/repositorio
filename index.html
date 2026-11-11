@@ -13,14 +13,37 @@
   <meta property="og:title" content="Wellington Matos | História, Pesquisa e Memória">
   <meta property="og:description" content="Pesquisa histórica, memória e patrimônio brasileiro, com foco na Segunda Guerra Mundial no Maranhão.">
   <meta property="og:url" content="https://wellingtonmatos.com.br/">
+  <meta property="og:image" content="https://wellingtonmatos.com.br/Imagens%20e%20Fotos/WellingtonMatos.Foto1%20-%20Copia.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wellington Matos | História, Pesquisa e Memória">
+  <meta name="twitter:description" content="Pesquisa histórica, memória e patrimônio brasileiro, com foco na Segunda Guerra Mundial no Maranhão.">
+  <meta name="twitter:image" content="https://wellingtonmatos.com.br/Imagens%20e%20Fotos/WellingtonMatos.Foto1%20-%20Copia.jpg">
   <title>Wellington Matos | História, Pesquisa e Memória</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Wellington Matos",
+    "url": "https://wellingtonmatos.com.br/",
+    "description": "Escritor, pesquisador e compositor, com foco em história, memória, patrimônio e Segunda Guerra Mundial no Brasil.",
+    "image": "https://wellingtonmatos.com.br/Imagens%20e%20Fotos/WellingtonMatos.Foto1%20-%20Copia.jpg",
+    "knowsAbout": [
+      "História brasileira",
+      "Segunda Guerra Mundial no Maranhão",
+      "Memória e patrimônio",
+      "Pesquisa histórica"
+    ]
+  }
+  </script>
   <style>
-    :root { --green: #243b32; --deep: #17251f; --gold: #c49a5a; --paper: #f3f0e8; --ink: #202720; --muted: #667067; --line: #d8d3c7; --white: #fffdf8; --serif: Georgia, "Times New Roman", serif; --sans: Inter, Arial, Helvetica, sans-serif; }
+    :root { --green: #243b32; --deep: #17251f; --gold: #c49a5a; --paper: #f3f0e8; --ink: #202720; --muted: #667067; --line: #d8d3c7; --white: #fffdf8; --serif: Georgia, "Times New Roman", serif; --sans: Arial, Helvetica, sans-serif; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 85px; }
     body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.65; }
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
+    .skip-link { position: absolute; left: -9999px; top: 0; background: var(--deep); color: #fff; padding: .75rem 1rem; z-index: 1000; }
+    .skip-link:focus { left: 1rem; top: 1rem; }
     .wrap { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
     .topline { height: 5px; background: linear-gradient(90deg, var(--green), var(--gold)); }
     header { position: sticky; top: 0; z-index: 10; background: rgba(255,253,248,.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px); }
@@ -38,7 +61,7 @@
     h1 em { color: #d7b77f; }
     .hero-copy { max-width: 620px; color: #d7ddd8; font-size: 1.05rem; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.7rem; }
-    .button { display: inline-flex; align-items: center; justify-content: center; padding: .8rem 1.1rem; border: 1px solid var(--green); border-radius: 999px; background: var(--green); color: white; font-weight: 700; }
+    .button { display: inline-flex; align-items: center; justify-content: center; padding: .8rem 1.1rem; border: 1px solid var(--green); border-radius: 999px; background: var(--green); color: white; }
     .button.gold { background: var(--gold); border-color: var(--gold); color: var(--deep); }
     .button.outline { background: transparent; border-color: rgba(255,255,255,.5); }
     .hero-photo { position: relative; margin: 0; padding: .7rem; border: 1px solid rgba(196,154,90,.7); transform: rotate(1deg); }
@@ -84,12 +107,13 @@
     footer { padding: 1.4rem 0; background: #111b15; color: #aeb8b0; font-size: .9rem; }
     .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
     .footer-name { color: #e5d7ba; font: 1.15rem var(--serif); }
-    @media (max-width: 850px) { .menu-toggle { display: block; } .navlinks { display: none; position: absolute; top: 76px; left: 0; right: 0; padding: 1rem; flex-direction: column; align-items: flex-start; background: var(--white); border-bottom: 1px solid var(--line); } .navlinks.open { display: flex; } .hero-grid, .about-grid, .feature-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; } .hero-grid { padding: 3.5rem 0; } .hero-photo { width: min(100%, 480px); justify-self: center; } .cards { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 560px) { .wrap { width: calc(100% - 2rem); } section { padding: 3.5rem 0; } .hero-photo img { height: 300px; } .stats-grid { grid-template-columns: repeat(2, 1fr); } .stat:nth-child(3) { border-top: 1px solid var(--line); } .stat:nth-child(4) { border-top: 1px solid var(--line); } .cards { grid-template-columns: 1fr; } .about-photo img, .feature-photo img { height: 300px; } .article-card { align-items: flex-start; flex-direction: column; } .footer-row { align-items: flex-start; flex-direction: column; } }
+    @media (max-width: 850px) { .menu-toggle { display: block; } .navlinks { display: none; position: absolute; top: 76px; left: 0; right: 0; padding: 1rem; flex-direction: column; align-items: flex-start; background: rgba(255,253,248,.98); border-bottom: 1px solid var(--line); } .navlinks.open { display: flex; } .hero-grid, .about-grid, .feature-grid, .contact-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 560px) { .wrap { width: calc(100% - 2rem); } section { padding: 3.5rem 0; } .hero-photo img { height: 300px; } .stats-grid { grid-template-columns: repeat(2, 1fr); } .stat:nth-child(odd) { border-left: none; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <div class="topline"></div>
   <header>
     <div class="wrap nav">
@@ -106,13 +130,13 @@
     </div>
   </header>
 
-  <main>
+  <main id="conteudo">
     <section class="hero" id="inicio">
       <div class="wrap hero-grid">
         <div>
           <div class="eyebrow">Pesquisa histórica e memória brasileira</div>
           <h1>História que<br><em>resiste ao tempo.</em></h1>
-          <p class="hero-copy">Wellington Matos é escritor, pesquisador, geógrafo e compositor. Dedica-se à pesquisa histórica, à memória da Segunda Guerra Mundial no Brasil e à valorização do patrimônio cultural e territorial.</p>
+          <p class="hero-copy">Wellington Matos é escritor, pesquisador, geógrafo e compositor. Dedica-se à pesquisa histórica, à memória da Segunda Guerra Mundial no Brasil e à valorização do patrimônio cultural local.</p>
           <div class="hero-actions">
             <a class="button gold" href="#pesquisas">Conheça as pesquisas ↗</a>
             <a class="button outline" href="artigos.html">Ler artigos ↗</a>
@@ -143,7 +167,7 @@
         <div class="about-copy">
           <div class="kicker">Trajetória e atuação</div>
           <h2>Pesquisa, território e memória.</h2>
-          <p>Wellington Matos é escritor, pesquisador e compositor, com atuação em história regional, geografia, patrimônio e memória. Sua pesquisa sobre a Segunda Guerra Mundial no Maranhão investiga ocorrências aeronáuticas, presença militar estrangeira e vestígios materiais relacionados ao conflito.</p>
+          <p>Wellington Matos é escritor, pesquisador e compositor, com atuação em história regional, geografia, patrimônio e memória. Sua pesquisa sobre a Segunda Guerra Mundial no Maranhão combina documentação, território e narrativas da memória coletiva.</p>
           <p>Seu trabalho combina pesquisa de campo, consulta a acervos, georreferenciamento e produção editorial.</p>
         </div>
       </div>
@@ -157,9 +181,9 @@
           <p class="section-intro">Pesquisa e divulgação histórica com atenção à documentação, à memória local e à preservação do patrimônio.</p>
         </div>
         <div class="cards">
-          <article class="card"><span class="card-number">01 / HISTÓRIA MILITAR</span><h3>Segunda Guerra Mundial no Brasil</h3><p>Presença militar estrangeira, rotas aéreas e marítimas, acidentes e episódios pouco conhecidos da história brasileira.</p></article>
-          <article class="card"><span class="card-number">02 / AVIAÇÃO</span><h3>B-25D Mitchell no Maranhão</h3><p>Investigação dos destroços da aeronave acidentada no litoral maranhense em 1943 e documentação da pesquisa de campo.</p></article>
-          <article class="card"><span class="card-number">03 / PATRIMÔNIO</span><h3>Acervos e vestígios materiais</h3><p>Identificação, documentação e salvaguarda de objetos, documentos, estruturas e testemunhos históricos.</p></article>
+          <article class="card"><span class="card-number">01 / HISTÓRIA MILITAR</span><h3>Segunda Guerra Mundial no Brasil</h3><p>Presença militar estrangeira, rotas aéreas e marítimas, acidentes e memória material.</p></article>
+          <article class="card"><span class="card-number">02 / AVIAÇÃO</span><h3>B-25D Mitchell no Maranhão</h3><p>Investigação dos destroços da aeronave acidentada no litoral maranhense em 1943.</p></article>
+          <article class="card"><span class="card-number">03 / PATRIMÔNIO</span><h3>Acervos e vestígios materiais</h3><p>Identificação, documentação e salvaguarda de objetos, documentos, espaços e relatos.</p></article>
         </div>
       </div>
     </section>
@@ -173,7 +197,7 @@
         <div class="feature-copy">
           <div class="kicker">Dossiê em destaque</div>
           <h2>O B-25D Mitchell e a memória da guerra no Maranhão.</h2>
-          <p>A investigação dos destroços do bombardeiro norte-americano North American B-25D Mitchell, acidentado no litoral de Humberto de Campos (MA), em maio de 1943, é um eixo central da pesquisa sobre a Segunda Guerra Mundial no Brasil.</p>
+          <p>A investigação dos destroços do bombardeiro norte-americano B-25D Mitchell, acidentado no litoral de Humberto de Campos (MA), em maio de 1943, é um eixo central da pesquisa histórica de Wellington Matos.</p>
           <div class="hero-actions">
             <a class="button gold" href="artigos/aviao-b25d-segunda-guerra-mundial.html">Ler artigo do B-25D ↗</a>
             <a class="button outline" href="galeria.html#pesquisa">Ver imagens da pesquisa ↗</a>
@@ -190,9 +214,9 @@
           <p class="section-intro">Textos sobre história, memória e patrimônio brasileiro.</p>
         </div>
         <div class="article-list">
-          <article class="article-card"><div><h3>Avião B-25D e a II Guerra Mundial</h3><p>Referência histórica sobre o bombardeiro Mitchell e o acidente no litoral maranhense.</p></div><a class="text-link" href="artigos/aviao-b25d-segunda-guerra-mundial.html">Ler artigo ↗</a></article>
-          <article class="article-card"><div><h3>Caminhões de Hitler no Brasil</h3><p>O “Mondrongo dos Padres” e os caminhões Opel Blitz do Projeto AMA.</p></div><a class="text-link" href="artigos/caminhoes-de-hitler-no-brasil.html">Ler artigo ↗</a></article>
-          <article class="article-card"><div><h3>Memória e patrimônio no Brasil</h3><p>Reflexões sobre vestígios, memória coletiva e preservação.</p></div><a class="text-link" href="artigos/memoria-e-patrimonio-no-brasil.html">Ler artigo ↗</a></article>
+          <article class="article-card"><div><h3>Avião B-25D e a II Guerra Mundial</h3><p>Referência histórica sobre o bombardeiro Mitchell e o acidente no litoral maranhense.</p></div><a class="text-link" href="artigos/aviao-b25d-segunda-guerra-mundial.html">Ler artigo →</a></article>
+          <article class="article-card"><div><h3>Caminhões de Hitler no Brasil</h3><p>O “Mondrongo dos Padres” e a história dos caminhões Opel Blitz do Projeto AMA em São Bento.</p></div><a class="text-link" href="artigos/caminhoes-de-hitler-no-brasil.html">Ler artigo →</a></article>
+          <article class="article-card"><div><h3>Memória e patrimônio no Brasil</h3><p>Reflexões sobre a forma como a memória coletiva preserva ou silencia vestígios do passado.</p></div><a class="text-link" href="artigos/memoria-e-patrimonio-no-brasil.html">Ler artigo →</a></article>
         </div>
         <p style="margin-top:1.4rem"><a class="button" href="artigos.html">Ver todos os artigos ↗</a></p>
       </div>
@@ -200,8 +224,8 @@
 
     <section class="contact" id="contato">
       <div class="wrap contact-grid">
-        <div><div class="kicker">Contato e colaboração</div><h2>Vamos documentar a história.</h2><p>Canal destinado a pesquisadores, instituições, jornalistas, familiares, colecionadores e interessados em memória e patrimônio.</p></div>
-        <div><p>Para contato profissional, envie uma mensagem para <a href="mailto:wellmatos@hotmail.com?subject=Contato%20pelo%20portal%20Wellington%20Matos">wellmatos@hotmail.com</a>.</p><a class="button gold" href="mailto:wellmatos@hotmail.com?subject=Contato%20pelo%20portal%20Wellington%20Matos">Enviar e-mail ↗</a></div>
+        <div><div class="kicker">Contato e colaboração</div><h2>Vamos documentar a história.</h2><p>Canal destinado a pesquisadores, instituições, jornalistas, familiares, colecionadores e interessados em temas históricos e patrimoniais.</p></div>
+        <div><p>Para contato profissional, envie uma mensagem para <a href="mailto:wellmatos@hotmail.com?subject=Contato%20pelo%20portal%20Wellington%20Matos">wellmatos@hotmail.com</a>.</p><a class="button outline" href="mailto:wellmatos@hotmail.com?subject=Contato%20pelo%20portal%20Wellington%20Matos">Enviar e-mail</a></div>
       </div>
     </section>
   </main>
