@@ -21,6 +21,12 @@
     "url": "https://wellingtonmatos.com.br/pesquisador.html",
     "image": "https://wellingtonmatos.com.br/LivroWellingtonMatos_Foto1%20-%20Copia.jpg",
     "jobTitle": ["Escritor", "Pesquisador", "Geógrafo", "Compositor"],
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "ISNI",
+      "value": "0000000530606430",
+      "url": "https://isni.org/isni/0000000530606430"
+    },
     "description": "Escritor e pesquisador com atuação em história regional, geografia, patrimônio e memória. Pesquisa a Segunda Guerra Mundial no Brasil, com destaque para o Maranhão e o B-25D Mitchell.",
     "knowsAbout": [
       "Segunda Guerra Mundial no Brasil",
@@ -47,6 +53,9 @@
     h1 { margin: .6rem 0 1rem; font-size: clamp(2.5rem, 6vw, 4.2rem); }
     h2 { margin-top: 2rem; font-size: clamp(1.7rem, 4vw, 2.4rem); }
     .lead { max-width: 760px; color: var(--muted); font-size: 1.15rem; }
+    .author-isni { margin: .35rem 0 1rem; font-size: .96rem; color: var(--muted); }
+    .author-isni strong { color: var(--deep); }
+    .author-isni a { color: var(--green); text-decoration: underline; text-underline-offset: 2px; }
     .panel { margin-top: 2rem; padding: clamp(1.2rem, 4vw, 2rem); border: 1px solid var(--line); border-radius: 16px; background: var(--white); }
     .panel p:last-child { margin-bottom: 0; }
     .topics { display: flex; flex-wrap: wrap; gap: .6rem; padding: 0; list-style: none; }
@@ -61,11 +70,12 @@
   <main class="wrap">
     <div class="eyebrow">Biografia · Pesquisa · História</div>
     <h1>Quem é Wellington Matos?</h1>
+    <p class="author-isni"><strong>ISNI:</strong> <a href="https://isni.org/isni/0000000530606430" target="_blank" rel="noopener">0000 0005 3060 6430</a></p>
     <p class="lead">Wellington Matos é escritor, pesquisador, geógrafo e compositor. Seu trabalho se dedica à história regional, à memória e ao patrimônio brasileiro, com destaque para a Segunda Guerra Mundial no Maranhão.</p>
     <section class="panel" aria-labelledby="trajetoria">
       <h2 id="trajetoria">Trajetória e método de pesquisa</h2>
-      <p>Suas pesquisas articulam investigação de campo, consulta a acervos, georreferenciamento e produção editorial. O objetivo é documentar acontecimentos e vestígios históricos, relacionando fontes, território e memória local.</p>
-      <p>Entre os temas em destaque está a investigação sobre o bombardeiro North American B-25D Mitchell acidentado no litoral de Humberto de Campos, Maranhão, em 1943, e sua relação com a história da aviação militar durante a Segunda Guerra Mundial.</p>
+      <p>Suas pesquisas articulam investigação de campo, consulta a acervos, georreferenciamento e produção editorial. O objetivo é documentar acontecimentos e vestígios históricos, relacionando memória, território e patrimônio.</p>
+      <p>Entre os temas em destaque está a investigação sobre o bombardeiro North American B-25D Mitchell acidentado no litoral de Humberto de Campos, Maranhão, em 1943, e sua relação com a Segunda Guerra Mundial no Brasil.</p>
     </section>
     <section aria-labelledby="temas">
       <h2 id="temas">Temas de pesquisa</h2>
@@ -78,7 +88,7 @@
         <li>Patrimônio histórico e memória</li>
       </ul>
     </section>
-    <p>Veja também as <a href="index.html#pesquisas">linhas de pesquisa</a>, o <a href="artigos/aviao-b25d-segunda-guerra-mundial.html">artigo sobre o B-25D</a> e os demais <a href="artigos.html">artigos de Wellington Matos</a>.</p>
+    <p>Veja também as <a href="index.html#pesquisas">linhas de pesquisa</a>, o <a href="artigos/aviao-b25d-segunda-guerra-mundial.html">artigo sobre o B-25D</a> e os demais <a href="artigos.html">artigos do autor</a>.</p>
   </main>
   <footer><div class="wrap">© 2026 · Wellington Matos · <a href="index.html#contato">Contato</a></div></footer>
 </body>
