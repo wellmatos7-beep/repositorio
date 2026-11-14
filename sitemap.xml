@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://wellingtonmatos.com.br/</loc></url>
+  <url><loc>https://wellingtonmatos.com.br/</loc><lastmod>2026-11-14</lastmod><priority>1.0</priority></url>
   <url><loc>https://wellingtonmatos.com.br/pesquisador.html</loc></url>
   <url><loc>https://wellingtonmatos.com.br/pesquisas.html</loc></url>
   <url><loc>https://wellingtonmatos.com.br/livros.html</loc></url>
   <url><loc>https://wellingtonmatos.com.br/segunda-guerra-mundial-no-maranhao.html</loc></url>
   <url><loc>https://wellingtonmatos.com.br/b25d-maranhao.html</loc></url>
-  <url><loc>https://wellingtonmatos.com.br/artigos.html</loc></url>
-  <url><loc>https://wellingtonmatos.com.br/galeria.html</loc></url>
-  <url><loc>https://wellingtonmatos.com.br/artigos/b25d-mitchell-humberto-de-campos-maranhao-1943.html</loc></url>
-  <url><loc>https://wellingtonmatos.com.br/artigos/caminhoes-opel-blitz-sao-bento-maranhao-projeto-ama.html</loc></url>
-  <url><loc>https://wellingtonmatos.com.br/artigos/memoria-e-patrimonio-no-brasil.html</loc></url>
-  <url><loc>https://wellingtonmatos.com.br/perguntas-frequentes.html</loc></url>
+  <url><loc>https://wellingtonmatos.com.br/artigos.html</loc><lastmod>2026-11-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://wellingtonmatos.com.br/galeria.html</loc><priority>0.6</priority></url>
+  <url><loc>https://wellingtonmatos.com.br/artigos/b25d-mitchell-humberto-de-campos-maranhao-1943.html</loc><lastmod>2026-11-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://wellingtonmatos.com.br/artigos/caminhoes-opel-blitz-sao-bento-maranhao-projeto-ama.html</loc><lastmod>2026-11-14</lastmod><priority>0.8</priority></url>
+  <url><loc>https://wellingtonmatos.com.br/artigos/memoria-e-patrimonio-no-brasil.html</loc><lastmod>2026-11-14</lastmod><priority>0.7</priority></url>
+  <url><loc>https://wellingtonmatos.com.br/perguntas-frequentes.html</loc><lastmod>2026-11-14</lastmod><priority>0.7</priority></url>
 </urlset>
