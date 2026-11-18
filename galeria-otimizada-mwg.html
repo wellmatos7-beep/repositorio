@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Galeria de Wellington Matos: retratos, pesquisa histórica no Maranhão e publicações.">
+  <meta name="theme-color" content="#17251f">
+  <title>Galeria | Wellington Matos</title>
+  <style>
+    :root { --green:#243b32; --deep:#17251f; --gold:#c49a5a; --gold-light:#dfc28f; --paper:#f5f2ea; --ink:#202720; --muted:#6d746c; --line:#ded8cb; --white:#fffdf8; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+    a { color:inherit; }
+    .topline { height:5px; background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--green)); }
+    header { background:var(--deep); color:#f8f5ec; }
+    .nav,.hero-inner,main,.footer-inner { width:min(1160px,calc(100% - 48px)); margin:0 auto; }
+    .nav { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { display:flex; align-items:center; gap:13px; text-decoration:none; }
+    .mark { width:44px; height:44px; display:grid; place-items:center; border:1px solid var(--gold); border-radius:50%; color:var(--gold-light); font:22px Georgia,serif; }
+    .brand strong { display:block; font:18px Georgia,serif; }
+    .brand small { display:block; margin-top:5px; color:#bdc9bf; font-size:9px; letter-spacing:.17em; text-transform:uppercase; }
+    .back-link { color:var(--gold-light); font-size:12px; font-weight:650; text-decoration:none; }
+    .hero { padding:70px 0 64px; background:radial-gradient(ellipse at 82% 18%,#405448 0,var(--deep) 62%); border-bottom:1px solid rgba(196,154,90,.5); }
+    .eyebrow,.section-kicker { color:var(--gold); font-size:10px; font-weight:800; letter-spacing:.22em; text-transform:uppercase; }
+    h1,h2,figcaption { font-family:Georgia,"Times New Roman",serif; font-weight:400; }
+    h1 { max-width:760px; margin:18px 0; font-size:clamp(42px,7vw,76px); line-height:.98; letter-spacing:-.04em; }
+    .hero p { max-width:670px; margin:0; color:#d4ddd5; font-size:15px; line-height:1.8; }
+    .hero-nav { display:flex; flex-wrap:wrap; gap:9px; margin-top:26px; }
+    .hero-nav a { padding:9px 13px; border:1px solid rgba(255,255,255,.25); color:#f8f5ec; font-size:11px; text-decoration:none; }
+    .hero-nav a:hover { border-color:var(--gold); color:var(--gold-light); }
+    main { padding:52px 0 76px; }
+    .gallery-section { margin:0 0 56px; padding-bottom:40px; border-bottom:1px solid var(--line); scroll-margin-top:20px; }
+    .section-heading { display:flex; align-items:end; justify-content:space-between; gap:20px; margin-bottom:22px; }
+    h2 { margin:8px 0 0; font-size:clamp(30px,4vw,42px); line-height:1.08; }
+    .section-note { margin:0 0 3px; color:var(--muted); font-size:10px; letter-spacing:.1em; text-transform:uppercase; }
+    .filters { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 22px; }
+    .filter-button { padding:9px 13px; border:1px solid var(--line); background:var(--white); color:var(--ink); font:600 11px system-ui,sans-serif; cursor:pointer; }
+    .filter-button[aria-pressed="true"],.filter-button:hover { border-color:var(--green); background:var(--green); color:white; }
+    .gallery { columns:3 250px; column-gap:18px; }
+    .photo { display:inline-block; width:100%; margin:0 0 18px; break-inside:avoid; background:var(--white); border:1px solid var(--line); box-shadow:0 10px 24px rgba(24,34,27,.06); vertical-align:top; }
+    .photo[hidden] { display:none; }
+    .image-button { display:block; width:100%; padding:0; border:0; background:#e3ded1; cursor:zoom-in; overflow:hidden; }
+    .photo img { display:block; width:100%; max-height:520px; object-fit:cover; transition:transform .35s ease; }
+    .image-button:hover img,.image-button:focus-visible img { transform:scale(1.025); }
+    .books .photo img { max-height:460px; padding:14px; object-fit:contain; background:linear-gradient(145deg,#f8f6f0,#eee9dd); }
+    figcaption { position:relative; padding:16px 17px; font-size:17px; line-height:1.3; }
+    figcaption::before { position:absolute; top:0; left:17px; width:32px; height:2px; background:var(--gold); content:""; }
+    .caption-detail { display:block; margin-top:5px; color:var(--muted); font:10px/1.5 system-ui,sans-serif; }
+    .contact { padding:28px; border:1px solid var(--line); background:var(--white); }
+    .contact-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+    .contact h3 { margin:0 0 10px; color:var(--green); font:20px Georgia,serif; }
+    .contact a { display:inline-block; margin:4px 12px 4px 0; color:var(--green); font-size:12px; }
+    .books-link { display:inline-block; margin-top:13px; padding:11px 15px; background:var(--green); color:white; font-size:11px; font-weight:700; text-decoration:none; }
+    footer { padding:24px 0; background:#111b15; color:#9eafa2; font-size:10px; }
+    .footer-inner { display:flex; justify-content:space-between; gap:18px; }
+    .footer-inner a { color:var(--gold-light); }
+    dialog { width:min(94vw,1200px); max-width:none; max-height:94vh; padding:12px; border:1px solid rgba(223,194,143,.55); background:#111b15; color:white; }
+    dialog::backdrop { background:rgba(8,13,10,.92); }
+    .lightbox-image { display:block; max-width:100%; max-height:78vh; margin:auto; object-fit:contain; }
+    .lightbox-bar { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-top:12px; color:#eee8dc; font-size:12px; }
+    .lightbox-actions { display:flex; gap:8px; }
+    .lightbox-actions button { padding:8px 11px; border:1px solid rgba(255,255,255,.35); background:transparent; color:white; cursor:pointer; }
+    .lightbox-actions button:hover { border-color:var(--gold-light); color:var(--gold-light); }
+    @media(max-width:650px) { .nav,.hero-inner,main,.footer-inner { width:calc(100% - 32px); } .hero { padding:52px 0; } .gallery { columns:2 180px; column-gap:12px; } .photo { margin-bottom:12px; } .contact-grid { grid-template-columns:1fr; } }
+    @media(max-width:420px) { .gallery { columns:1; } .section-heading { align-items:flex-start; flex-direction:column; } .lightbox-bar,.footer-inner { align-items:flex-start; flex-direction:column; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition-duration:.01ms!important; } }
+  
+    /* MWG otimizado: evita CLS + pula render offscreen */
+    .gallery-section,.content-section,.book-feature{content-visibility:auto;contain-intrinsic-size:auto 600px}
+    img{aspect-ratio:auto}
+</style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <nav class="nav" aria-label="Navegação da galeria">
+      <a class="brand" href="index.html" aria-label="Wellington Matos — página inicial"><span class="mark" aria-hidden="true">WM</span><span><strong>Wellington Matos</strong><small>História · Pesquisa · Literatura</small></span></a>
+      <a class="back-link" href="index.html">← Voltar ao site</a>
+    </nav>
+    <div class="hero"><div class="hero-inner">
+      <div class="eyebrow">Acervo visual</div>
+      <h1>Memórias, pesquisa e literatura.</h1>
+      <p>Retratos, registros de pesquisa histórica no Maranhão e publicações de Wellington Matos. Filtre por tema e selecione uma imagem para ampliá-la.</p>
+      <nav class="hero-nav" aria-label="Ir para uma seção da galeria"><a href="#pesquisador">Retratos</a><a href="#pesquisa">Pesquisa e território</a><a href="#arquivo">Arquivo visual</a><a href="#livros">Livros</a><a href="#contato">Contato</a></nav>
+    </div></div>
+  </header>
+  <main>
+    <div class="filters" role="group" aria-label="Filtrar fotos por categoria">
+      <button class="filter-button" type="button" data-filter="all" aria-pressed="true">Todas</button>
+      <button class="filter-button" type="button" data-filter="retrato" aria-pressed="false">Retratos</button>
+      <button class="filter-button" type="button" data-filter="pesquisa" aria-pressed="false">Pesquisa</button>
+      <button class="filter-button" type="button" data-filter="arquivo" aria-pressed="false">Arquivo histórico</button>
+      <button class="filter-button" type="button" data-filter="livro" aria-pressed="false">Livros</button>
+    </div>
+    <section class="gallery-section" id="pesquisador" aria-labelledby="people-title">
+      <div class="section-heading"><div><div class="section-kicker">Retratos</div><h2 id="people-title">Wellington Matos</h2></div><p class="section-note">Fotografias únicas do acervo</p></div>
+      <div class="gallery">
+        <figure class="photo" data-category="retrato"><button class="image-button" type="button" aria-label="Ampliar foto 1 de Wellington Matos"><img src="otimizados/galeria/wellingtonmatos.foto1.png-635w.webp" srcset="otimizados/galeria/wellingtonmatos.foto1.png-400w.webp 400w, otimizados/galeria/wellingtonmatos.foto1.png-635w.webp 635w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Wellington Matos — foto do acervo pessoal" loading="lazy" decoding="async" width="635" height="669"></button><figcaption>Wellington Matos<span class="caption-detail">Acervo fotográfico</span></figcaption></figure>
+        <figure class="photo" data-category="retrato"><button class="image-button" type="button" aria-label="Ampliar foto 2 de Wellington Matos"><img src="otimizados/galeria/wellingtonmatos.foto2.png-800w.webp" srcset="otimizados/galeria/wellingtonmatos.foto2.png-400w.webp 400w, otimizados/galeria/wellingtonmatos.foto2.png-800w.webp 800w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Wellington Matos — registro documental" loading="lazy" decoding="async" width="800" height="449"></button><figcaption>Registro documental<span class="caption-detail">Arquivo pessoal</span></figcaption></figure>
+        <figure class="photo" data-category="retrato"><button class="image-button" type="button" aria-label="Ampliar foto 4 de Wellington Matos"><img src="otimizados/galeria/wellingtonmatos.foto4.png-732w.webp" srcset="otimizados/galeria/wellingtonmatos.foto4.png-400w.webp 400w, otimizados/galeria/wellingtonmatos.foto4.png-732w.webp 732w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Wellington Matos — retrato do pesquisador" loading="lazy" decoding="async" width="732" height="940"></button><figcaption>Retrato do pesquisador<span class="caption-detail">Arquivo visual</span></figcaption></figure>
+        <figure class="photo" data-category="retrato"><button class="image-button" type="button" aria-label="Ampliar foto 5 de Wellington Matos"><img src="otimizados/galeria/wellingtonmatos.foto5.png-545w.webp" srcset="otimizados/galeria/wellingtonmatos.foto5.png-400w.webp 400w, otimizados/galeria/wellingtonmatos.foto5.png-545w.webp 545w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Wellington Matos em estudo histórico" loading="lazy" decoding="async" width="545" height="622"></button><figcaption>Estudo histórico<span class="caption-detail">Memória e pesquisa</span></figcaption></figure>
+        <figure class="photo" data-category="retrato"><button class="image-button" type="button" aria-label="Ampliar foto 6 de Wellington Matos"><img src="otimizados/galeria/wellingtonmatos.foto6.png-400w.webp" srcset="otimizados/galeria/wellingtonmatos.foto6.png-400w.webp 400w, otimizados/galeria/wellingtonmatos.foto6.png-400w.webp 400w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Wellington Matos em pesquisa e produção" loading="lazy" decoding="async" width="400" height="400"></button><figcaption>Pesquisa e produção<span class="caption-detail">Arquivo de trabalho</span></figcaption></figure>
+      </div>
+    </section>
+    <section class="gallery-section" id="pesquisa" aria-labelledby="research-title">
+      <div class="section-heading"><div><div class="section-kicker">Maranhão · Brasil</div><h2 id="research-title">Pesquisa e território</h2></div></div>
+      <div class="gallery">
+        <figure class="photo" data-category="pesquisa"><button class="image-button" type="button" aria-label="Ampliar mapa da pesquisa histórica no Maranhão"><img src="otimizados/galeria/cartografia2guerrama.foto1-800w.webp" srcset="otimizados/galeria/cartografia2guerrama.foto1-400w.webp 400w, otimizados/galeria/cartografia2guerrama.foto1-800w.webp 800w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Mapa da pesquisa histórica e cartográfica do Maranhão" loading="lazy" decoding="async" width="800" height="565"></button><figcaption>Cartografia e território<span class="caption-detail">Maranhão · pesquisa histórica</span></figcaption></figure>
+        <figure class="photo" data-category="pesquisa"><button class="image-button" type="button" aria-label="Ampliar imagem de Humberto de Campos"><img src="otimizados/galeria/humberto_de_campos_sage_20260509_233803-800w.webp" srcset="otimizados/galeria/humberto_de_campos_sage_20260509_233803-400w.webp 400w, otimizados/galeria/humberto_de_campos_sage_20260509_233803-800w.webp 800w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Imagem de pesquisa histórica sobre Humberto de Campos" loading="lazy" decoding="async" width="800" height="1131"></button><figcaption>Contexto documental<span class="caption-detail">Arquivo de pesquisa</span></figcaption></figure>
+        <figure class="photo" data-category="pesquisa"><button class="image-button" type="button" aria-label="Ampliar imagem do trem de pouso B-25D"><img src="otimizados/galeria/trempousob25d_fotowellingtonmatos-800w.webp" srcset="otimizados/galeria/trempousob25d_fotowellingtonmatos-400w.webp 400w, otimizados/galeria/trempousob25d_fotowellingtonmatos-800w.webp 800w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Trem de pouso do B-25D — foto de Wellington Matos" loading="lazy" decoding="async" width="800" height="600"></button><figcaption>Trem de pouso do B-25D<span class="caption-detail">Avião e memória</span></figcaption></figure>
+        <figure class="photo" data-category="pesquisa"><button class="image-button" type="button" aria-label="Ampliar foto de Ilha Grande"><img src="otimizados/galeria/ilhagrande_hum.decampos.fotowellingtonma-800w.webp" srcset="otimizados/galeria/ilhagrande_hum.decampos.fotowellingtonma-400w.webp 400w, otimizados/galeria/ilhagrande_hum.decampos.fotowellingtonma-800w.webp 800w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Ilha Grande em Humberto de Campos — foto de Wellington Matos" loading="lazy" decoding="async" width="800" height="600"></button><figcaption>Ilha Grande<span class="caption-detail">Humberto de Campos · Maranhão</span></figcaption></figure>
+        <figure class="photo" data-category="pesquisa"><button class="image-button" type="button" aria-label="Ampliar avião B-25D"><img src="otimizados/galeria/avi-ob25d.fonteairfix-800w.webp" srcset="otimizados/galeria/avi-ob25d.fonteairfix-400w.webp 400w, otimizados/galeria/avi-ob25d.fonteairfix-800w.webp 800w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Avião B-25D — imagem da fonte Airfix" loading="lazy" decoding="async" width="800" height="499"></button><figcaption>Aeronave B-25D<span class="caption-detail">Referência: Airfix</span></figcaption></figure>
+        <figure class="photo" data-category="pesquisa"><button class="image-button" type="button" aria-label="Ampliar Fortaleza Voadora B-17"><img src="otimizados/galeria/fortalezavoadora_b17-640w.webp" srcset="otimizados/galeria/fortalezavoadora_b17-400w.webp 400w, otimizados/galeria/fortalezavoadora_b17-640w.webp 640w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Fortaleza Voadora B-17" loading="lazy" decoding="async" width="640" height="427"></button><figcaption>Fortaleza Voadora B-17<span class="caption-detail">Aviação na Segunda Guerra</span></figcaption></figure>
+      </div>
+    </section>
+    <section class="gallery-section" id="arquivo" aria-labelledby="archive-title">
+      <div class="section-heading"><div><div class="section-kicker">Documentos e imprensa</div><h2 id="archive-title">Arquivo histórico</h2></div></div>
+      <div class="gallery">
+        <figure class="photo" data-category="arquivo"><button class="image-button" type="button" aria-label="Ampliar foto do aeroporto de São Luís em 1940"><img src="otimizados/galeria/aeroportosaoluis1940fotoarquivopublico-800w.webp" srcset="otimizados/galeria/aeroportosaoluis1940fotoarquivopublico-400w.webp 400w, otimizados/galeria/aeroportosaoluis1940fotoarquivopublico-800w.webp 800w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Aeroporto de São Luís em 1940 — foto do arquivo público" loading="lazy" decoding="async" width="800" height="558"></button><figcaption>Aeroporto de São Luís<span class="caption-detail">Arquivo histórico · 1940</span></figcaption></figure>
+        <figure class="photo" data-category="arquivo"><button class="image-button" type="button" aria-label="Ampliar matéria do Estadão"><img src="otimizados/galeria/materiaestad-o_wellingtonmatos-800w.webp" srcset="otimizados/galeria/materiaestad-o_wellingtonmatos-400w.webp 400w, otimizados/galeria/materiaestad-o_wellingtonmatos-800w.webp 800w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Matéria do Estadão sobre a pesquisa de Wellington Matos" loading="lazy" decoding="async" width="800" height="600"></button><figcaption>Pesquisa em destaque<span class="caption-detail">Estadão · cobertura</span></figcaption></figure>
+        <figure class="photo" data-category="arquivo"><button class="image-button" type="button" aria-label="Ampliar recorte de jornal"><img src="otimizados/galeria/jornalestadosaopaulo.fotoalmirprazeres-409w.webp" srcset="otimizados/galeria/jornalestadosaopaulo.fotoalmirprazeres-400w.webp 400w, otimizados/galeria/jornalestadosaopaulo.fotoalmirprazeres-409w.webp 409w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Matéria em jornal — foto de Almir Prazeres" loading="lazy" decoding="async" width="409" height="391"></button><figcaption>Matéria em jornal<span class="caption-detail">Foto de Almir Prazeres</span></figcaption></figure>
+        <figure class="photo" data-category="arquivo"><button class="image-button" type="button" aria-label="Ampliar imagem dos destroços do B-25D"><img src="otimizados/galeria/fotodestro-osb25d.foto_almirprazeres-800w.webp" srcset="otimizados/galeria/fotodestro-osb25d.foto_almirprazeres-400w.webp 400w, otimizados/galeria/fotodestro-osb25d.foto_almirprazeres-800w.webp 800w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Destroços do B-25D — foto de Almir Prazeres" loading="lazy" decoding="async" width="800" height="532"></button><figcaption>Destroços do B-25D<span class="caption-detail">Foto de Almir Prazeres</span></figcaption></figure>
+        <figure class="photo" data-category="arquivo"><button class="image-button" type="button" aria-label="Ampliar caminhão Opel Blitz"><img src="otimizados/galeria/caminhaoopelblitz_projetoama.foto1-800w.webp" srcset="otimizados/galeria/caminhaoopelblitz_projetoama.foto1-400w.webp 400w, otimizados/galeria/caminhaoopelblitz_projetoama.foto1-800w.webp 800w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Caminhão Opel Blitz do Projeto AMA" loading="lazy" decoding="async" width="800" height="505"></button><figcaption>Caminhão Opel Blitz<span class="caption-detail">Projeto AMA</span></figcaption></figure>
+        <figure class="photo" data-category="arquivo"><button class="image-button" type="button" aria-label="Ampliar recorte de matérias sobre o B-25D"><img src="otimizados/galeria/materiasemjornais_b25d-649w.webp" srcset="otimizados/galeria/materiasemjornais_b25d-400w.webp 400w, otimizados/galeria/materiasemjornais_b25d-649w.webp 649w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Matérias em jornais sobre o B-25D" loading="lazy" decoding="async" width="649" height="264"></button><figcaption>Imprensa e B-25D<span class="caption-detail">Registros de jornais</span></figcaption></figure>
+      </div>
+    </section>
+    <section class="gallery-section books" id="livros" aria-labelledby="books-title">
+      <div class="section-heading"><div><div class="section-kicker">Produção bibliográfica</div><h2 id="books-title">Livros e publicações</h2></div><a class="books-link" href="https://autoresdobrasil.com.br/autor/wellington-matos" target="_blank" rel="noopener noreferrer">Ver livros à venda ↗</a></div>
+      <div class="gallery">
+        <figure class="photo" data-category="livro"><button class="image-button" type="button" aria-label="Ampliar livro de Wellington Matos, foto 1"><img src="otimizados/hero-wellington-800w.webp" srcset="otimizados/hero-wellington-480w.webp 480w, otimizados/hero-wellington-800w.webp 800w, otimizados/hero-wellington-1000w.webp 1000w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Livro de Wellington Matos — capa e registro" loading="lazy" decoding="async" width="800" height="1071"></button><figcaption>Livro de Wellington Matos<span class="caption-detail">Capa e apresentação</span></figcaption></figure>
+        <figure class="photo" data-category="livro"><button class="image-button" type="button" aria-label="Ampliar livro de Wellington Matos, foto 2"><img src="otimizados/galeria/livrowellingtonmatos_foto2-800w.webp" srcset="otimizados/galeria/livrowellingtonmatos_foto2-400w.webp 400w, otimizados/galeria/livrowellingtonmatos_foto2-800w.webp 800w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Livro de Wellington Matos — edição e apresentação" loading="lazy" decoding="async" width="800" height="1200"></button><figcaption>Publicação histórica<span class="caption-detail">Registro editorial</span></figcaption></figure>
+        <figure class="photo" data-category="livro"><button class="image-button" type="button" aria-label="Ampliar livro de Wellington Matos, foto 3"><img src="otimizados/galeria/livrowellingtonmatos_foto3-800w.webp" srcset="otimizados/galeria/livrowellingtonmatos_foto3-400w.webp 400w, otimizados/galeria/livrowellingtonmatos_foto3-800w.webp 800w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Livro de Wellington Matos — capa" loading="lazy" decoding="async" width="800" height="1086"></button><figcaption>Detalhe da capa<span class="caption-detail">Produção editorial</span></figcaption></figure>
+        <figure class="photo" data-category="livro"><button class="image-button" type="button" aria-label="Ampliar livro de Wellington Matos, foto 4"><img src="otimizados/galeria/livrowellingtonmatos_foto4-copia-720w.webp" srcset="otimizados/galeria/livrowellingtonmatos_foto4-copia-400w.webp 400w, otimizados/galeria/livrowellingtonmatos_foto4-copia-720w.webp 720w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Livro de Wellington Matos — registro visual" loading="lazy" decoding="async" width="720" height="978"></button><figcaption>Registro visual<span class="caption-detail">Acervo de publicação</span></figcaption></figure>
+        <figure class="photo" data-category="livro"><button class="image-button" type="button" aria-label="Ampliar livro de Wellington Matos, foto 6"><img src="otimizados/galeria/livrowellingtonmatos_foto6-copia-800w.webp" srcset="otimizados/galeria/livrowellingtonmatos_foto6-copia-400w.webp 400w, otimizados/galeria/livrowellingtonmatos_foto6-copia-800w.webp 800w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Livro de Wellington Matos — capa" loading="lazy" decoding="async" width="800" height="510"></button><figcaption>Capa em destaque<span class="caption-detail">Obra e pesquisa</span></figcaption></figure>
+        <figure class="photo" data-category="livro"><button class="image-button" type="button" aria-label="Ampliar livro de Wellington Matos, foto 7"><img src="otimizados/galeria/livrowellingtonmatos_foto7-copia-800w.webp" srcset="otimizados/galeria/livrowellingtonmatos_foto7-copia-400w.webp 400w, otimizados/galeria/livrowellingtonmatos_foto7-copia-800w.webp 800w" sizes="(max-width: 650px) 90vw, (max-width: 1100px) 45vw, 380px" alt="Livro de Wellington Matos — edição ilustrada" loading="lazy" decoding="async" width="800" height="1000"></button><figcaption>Edição ilustrada<span class="caption-detail">Memória visual</span></figcaption></figure>
+      </div>
+    </section>
+    <section class="contact" id="contato" aria-labelledby="contact-title">
+      <div class="section-heading"><div><div class="section-kicker">Fale comigo</div><h2 id="contact-title">Contato e redes</h2></div></div>
+      <div class="contact-grid"><div><h3>Contato direto</h3><a href="https://wa.me/5598981171374" target="_blank" rel="noopener noreferrer">WhatsApp · +55 (98) 98117-1374</a><a href="mailto:wellmatos@hotmail.com">E-mail · wellmatos@hotmail.com</a></div><div><h3>Redes</h3><a href="https://www.facebook.com/wellmatos" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/wellmatos_music/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://x.com/wellmatos_alem" target="_blank" rel="noopener noreferrer">X</a><a href="https://tiktok.com/@wellmatos_music" target="_blank" rel="noopener noreferrer">TikTok</a><a href="https://open.spotify.com/artist/7MTfzX5OmGJE3bVb8IeNdb" target="_blank" rel="noopener noreferrer">Spotify</a></div></div>
+    </section>
+  </main>
+  <footer><div class="footer-inner"><span>Wellington Matos · História · Pesquisa · Literatura</span><a href="#top">Voltar ao topo ↑</a></div></footer>
+  <dialog id="lightbox" aria-label="Imagem ampliada">
+    <img class="lightbox-image" id="lightboxImage" alt="">
+    <div class="lightbox-bar"><span id="lightboxCaption" aria-live="polite"></span><div class="lightbox-actions"><button id="previousImage" type="button" aria-label="Imagem anterior">← Anterior</button><button id="nextImage" type="button" aria-label="Próxima imagem">Próxima →</button><button id="fullscreenImage" type="button">Tela cheia</button><button id="closeLightbox" type="button">Fechar</button></div></div>
+  </dialog>
+  <script>
+    const filterButtons = [...document.querySelectorAll('.filter-button')];
+    const photos = [...document.querySelectorAll('.photo')];
+    filterButtons.forEach(button => button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      filterButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      photos.forEach(photo => { photo.hidden = filter !== 'all' && photo.dataset.category !== filter; });
+    }));
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    let visibleImages = [];
+    let currentIndex = 0;
+    function showImage(index) {
+      currentIndex = (index + visibleImages.length) % visibleImages.length;
+      const item = visibleImages[currentIndex];
+      const image = item.querySelector('img');
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+      lightboxCaption.textContent = item.querySelector('figcaption')?.innerText || image.alt;
+    }
+    document.querySelectorAll('.image-button').forEach(button => button.addEventListener('click', () => {
+      visibleImages = photos.filter(photo => !photo.hidden);
+      currentIndex = visibleImages.indexOf(button.closest('.photo'));
+      showImage(currentIndex);
+      lightbox.showModal();
+    }));
+    document.getElementById('previousImage').addEventListener('click', () => showImage(currentIndex - 1));
+    document.getElementById('nextImage').addEventListener('click', () => showImage(currentIndex + 1));
+    document.getElementById('closeLightbox').addEventListener('click', () => lightbox.close());
+    document.getElementById('fullscreenImage').addEventListener('click', async () => {
+      try { if (!document.fullscreenElement) await lightbox.requestFullscreen(); else await document.exitFullscreen(); } catch (_) { /* Tela cheia indisponível neste navegador. */ }
+    });
+    lightbox.addEventListener('click', event => { if (event.target === lightbox) lightbox.close(); });
+    lightbox.addEventListener('keydown', event => {
+      if (event.key === 'ArrowRight') showImage(currentIndex + 1);
+      if (event.key === 'ArrowLeft') showImage(currentIndex - 1);
+    });
+    lightbox.addEventListener('close', () => { lightboxImage.removeAttribute('src'); });
+  </script>
+</body>
+</html>
